@@ -4,12 +4,6 @@ import cn.nukkit.plugin.PluginBase;
 import cn.nukkit.utils.TextFormat;
 import cn.nukkit.level.generator.biome.Biome;
 
-import cn.nukkit.level.generator.noise.Simplex;
-import cn.nukkit.math.NukkitRandom;
-
-import java.util.HashMap;
-import java.util.Map;
-
 public class MainClass extends PluginBase {
 
     @Override
