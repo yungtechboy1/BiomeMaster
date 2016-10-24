@@ -1,11 +1,7 @@
 package BiomeMaster;
 
-import cn.nukkit.command.Command;
-import cn.nukkit.command.CommandSender;
 import cn.nukkit.plugin.PluginBase;
-import cn.nukkit.utils.Config;
 import cn.nukkit.utils.TextFormat;
-import cn.nukkit.utils.Utils;
 
 public class MainClass extends PluginBase {
 
