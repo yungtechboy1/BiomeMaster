@@ -38,6 +38,7 @@ public class MainClass extends PluginBase {
         this.fallback = fallback;
         this.temperature = new Simplex(random, 2F, 1F / 8F, 1F / 1024F);
         this.rainfall = new Simplex(random, 2F, 1F / 8F, 1F / 1024F);
+        return true
     }
 
     public int lookup(double temperature, double rainfall) {
