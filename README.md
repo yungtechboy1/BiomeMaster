@@ -21,17 +21,17 @@ Thanks to all for help me. If you want to help me ,create PR's or tell me :)
 
 ## Upcoming Update
 
-0.1beta - Fix populators
-0.1 - Add more populators
-0.2dev - Fix trees
-0.2beta - Add more trees
-0.2 - Finish all trees
-0.3dev - Finish all populators in biomes
-0.3beta - Add more to biomes
-0.3 - Fix color on Desert and other
-0.4dev - Fix RainFall and Temperature generation
-0.4beta - Fix more
-0.4 - Coming Soon
+- 0.1beta - Fix populators
+- 0.1 - Add more populators
+- 0.2dev - Fix trees
+- 0.2beta - Add more trees
+- 0.2 - Finish all trees
+- 0.3dev - Finish all populators in biomes
+- 0.3beta - Add more to biomes
+- 0.3 - Fix color on Desert and other
+- 0.4dev - Fix RainFall and Temperature generation
+- 0.4beta - Fix more
+- 0.4 - Coming Soon
  ...
 
 Attention! All version have new biomes added and more changes in biomes and more performances :)
