@@ -1,7 +1,7 @@
 # BiomeMaster
 BiomeMaster is one plugin for Nukkit with improved Generator and a lot more features.
 
-Note: This is one plugin specialy *for Nukkit*, for improve Generator ,for add more Biomes and other.
+Note: This is one plugin specialy **for Nukkit**, for improve Generator ,for add more Biomes and other.
 This plugin is in development and not have all features like Spigot or Bukkit.
 
 ## Information
