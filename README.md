@@ -6,7 +6,7 @@ This plugin is in development and not have all features like Spigot or Bukkit.
 
 ## Information
 
-- Need to communicate with us? Join our [gitter](https://gitter.im/BiomeMaster) group!
+- Need to communicate with us? Join our [GITTER](https://gitter.im/BiomeMaster/Lobby) group!
 - BiomeMaster is one plugin for Nukkit with improved Generator and a lot more features
 - You can download .jar from Circle CI. Tab to latest build,tap to artifacts selection and download .jar
 
