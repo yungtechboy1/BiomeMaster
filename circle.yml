@@ -2,8 +2,7 @@ checkout:
   post:
     - git submodule sync
     - git submodule update --init
-    - mvn clean
-    - mvn package
+    - mvn install
     - cp -R ./target/BiomeMaster-0.1dev.jar $CIRCLE_ARTIFACTS
 
 machine:
