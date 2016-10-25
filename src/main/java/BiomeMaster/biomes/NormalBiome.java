@@ -1,6 +1,6 @@
 package BiomeMaster.biomes;
 
-import BiomeMaster.Biome;
+import BiomeMaster.Biomes;
 
 /**
  * author: MagicDroidX
