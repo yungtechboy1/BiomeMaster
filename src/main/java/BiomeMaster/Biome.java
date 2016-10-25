@@ -16,7 +16,7 @@ import cn.nukkit.level.generator.Biome;
  * Nukkit Project
  * Modificated by BiomeMaster-Devs
  */
-public abstract class Biomes {
+public abstract class Biome {
 
 
     public static final int OCEAN = 0;
