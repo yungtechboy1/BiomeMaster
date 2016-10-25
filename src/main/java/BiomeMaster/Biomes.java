@@ -10,16 +10,13 @@ import BiomeMaster.biomes.generation.RiverBiome;
 import BiomeMaster.biomes.generation.IcePlainsBiome;
 import BiomeMaster.biomes.generation.BeachBiome;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
-
+import cn.nukkit.level.generator.Biome;
 /**
  * author: MagicDroidX
  * Nukkit Project
  * Modificated by BiomeMaster-Devs
  */
-public abstract class Biome {
+public abstract class Biomes {
 
 
     public static final int OCEAN = 0;
