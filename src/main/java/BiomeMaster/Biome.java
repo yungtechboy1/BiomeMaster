@@ -10,6 +10,10 @@ import BiomeMaster.biomes.generation.RiverBiome;
 import BiomeMaster.biomes.generation.IcePlainsBiome;
 import BiomeMaster.biomes.generation.BeachBiome;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * author: MagicDroidX
  * Nukkit Project
