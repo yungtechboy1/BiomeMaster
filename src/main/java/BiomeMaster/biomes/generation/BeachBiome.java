@@ -1,4 +1,4 @@
-package BiomeMaster.biome.generation;
+package BiomeMaster.biomes.generation;
 
 import cn.nukkit.block.Block;
 import cn.nukkit.block.BlockSand;
