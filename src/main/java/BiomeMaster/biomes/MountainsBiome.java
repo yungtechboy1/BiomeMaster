@@ -1,4 +1,4 @@
-package BiomeMaster.biome;
+package BiomeMaster.biomes;
 
 import cn.nukkit.level.generator.populator.PopulatorGrass;
 import cn.nukkit.level.generator.populator.PopulatorTallGrass;
