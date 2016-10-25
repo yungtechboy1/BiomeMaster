@@ -4,6 +4,8 @@ import cn.nukkit.block.Block;
 import cn.nukkit.block.BlockSand;
 import cn.nukkit.block.BlockSandstone;
 
+import BiomeMaster.biomes.SandyBiome;
+
 /**
  * Author: PeratX
  * Nukkit Project
