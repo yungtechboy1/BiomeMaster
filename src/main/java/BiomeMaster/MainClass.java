@@ -26,9 +26,9 @@ public class MainClass extends PluginBase {
             return Biome.SWAMP;
         } else {
             if (temperature < 0.25) {
-                return Biome.MOUNTAINS;
+                return Biome.RIVER;
             } else {
-                return Biome.SMALL_MOUNTAINS;
+                return Biome.BEACH;
             }
         }
     }
