@@ -1,4 +1,4 @@
-package cn.nukkit.level.generator.biome;
+package BiomeMaster.biomes;
 
 /**
  * author: MagicDroidX
