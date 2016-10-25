@@ -1,7 +1,5 @@
 package BiomeMaster;
 
-import cn.nukkit.level.generator.biome.Biome;
-
 import BiomeMaster.biomes.generation.OceanBiome;
 import BiomeMaster.biomes.generation.PlainBiome;
 import BiomeMaster.biomes.generation.DesertBiome;
@@ -17,7 +15,7 @@ import BiomeMaster.biomes.generation.BeachBiome;
  * Nukkit Project
  * Modificated by BiomeMaster-Devs
  */
-public abstract class Biomes {
+public abstract class Biome {
 
 
     public static final int OCEAN = 0;
