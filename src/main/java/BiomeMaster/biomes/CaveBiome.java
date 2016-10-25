@@ -1,4 +1,4 @@
-package BiomeMaster.biome;
+package BiomeMaster.biomes;
 
 /**
  * Nukkit Project
