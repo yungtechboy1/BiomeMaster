@@ -1,5 +1,7 @@
 package BiomeMaster.biome;
 
+import BiomeMaster.Biome;
+
 /**
  * author: MagicDroidX
  * Nukkit Project
