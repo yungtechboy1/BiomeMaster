@@ -1,4 +1,4 @@
-package BiomeMaster.biome;
+package BiomeMaster.biomes;
 
 import cn.nukkit.block.Block;
 import cn.nukkit.block.BlockDirt;
