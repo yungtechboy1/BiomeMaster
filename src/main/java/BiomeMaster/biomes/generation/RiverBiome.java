@@ -5,7 +5,7 @@ import cn.nukkit.level.generator.populator.PopulatorSugarcane;
 import cn.nukkit.level.generator.populator.PopulatorTallGrass;
 import cn.nukkit.level.generator.populator.PopulatorTallSugarcane;
 
-import BiomeMaster.biomes.generation.WateryBiome;
+import BiomeMaster.biomes.WateryBiome;
 
 /**
  * author: MagicDroidX
