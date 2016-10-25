@@ -1,6 +1,6 @@
 package BiomeMaster.biomes;
 
-import cn.nukkit.level.generator.biome.Biome;
+import BiomeMaster.Biome;
 
 /**
  * author: MagicDroidX
