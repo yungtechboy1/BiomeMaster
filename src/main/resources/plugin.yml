@@ -1,5 +1,5 @@
 name: BiomeMaster
-main: BiomeMaster.BiomeMasterer
+main: BiomeMaster.BiomeMaster
 version: "0.1dev"
 api: ["1.0.0"]
 
