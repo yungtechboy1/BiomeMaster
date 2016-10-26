@@ -2,8 +2,7 @@ name: BiomeMaster
 main: BiomeMaster.BiomeMasterer
 version: "0.1dev"
 api: ["1.0.0"]
-
-load: POSTWORLD
-author: ["NycuRO, Creeperface01, MrPowerGamerBR, MrGenga, Muqsit, SalmonDE, File14, Aericio, caspervanneck"]
+load: STARTUP
+author: "Creeperface, NycuRO, MrPowerGamerBR, MrGenga, Muqsit, SalmonDE, File14, Aericio, caspervanneck"
 description: BiomeMaster is one plugin for Nukkit with improved Generator and a lot more features.
 website: https://github.com/NycuRO/BiomeMaster
