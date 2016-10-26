@@ -60,6 +60,8 @@ public class EventListener implements Listener {
                     }
 
                     if (!flag) {
+                        i = 0;
+                        j = 0;
                         worldgenerator = new JungleTree(4 + new NukkitRandom().nextBoundedInt(7));
                     }
                     break;
