@@ -1,7 +1,7 @@
 package BiomeMaster.biome.gen;
 
 import BiomeMaster.biome.SandyBiome;
-import BiomeMaster.biome.NormalGenerator;
+import BiomeMaster.generator.NormalGenerator;
 
 /**
  * author: MagicDroidX
