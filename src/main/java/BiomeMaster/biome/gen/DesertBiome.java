@@ -1,6 +1,7 @@
 package BiomeMaster.biome.gen;
 
 import BiomeMaster.biome.SandyBiome;
+import BiomeMaster.biome.NormalGenerator;
 
 /**
  * author: MagicDroidX
@@ -17,5 +18,9 @@ public class DesertBiome extends SandyBiome {
     @Override
     public String getName() {
         return "Desert";
+    }
+    
+    public void initBiome() {
+        register(NormalGenerator.DESERT, this);
     }
 }
