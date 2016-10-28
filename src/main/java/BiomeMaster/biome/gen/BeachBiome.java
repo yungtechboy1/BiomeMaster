@@ -5,7 +5,7 @@ import cn.nukkit.block.BlockSand;
 import cn.nukkit.block.BlockSandstone;
 import cn.nukkit.level.generator.populator.PopulatorTallGrass;
 import BiomeMaster.biome.SandyBiome;
-import BiomeMaster.biome.NormalGenerator;
+import BiomeMaster.generator.NormalGenerator;
 
 /**
  * Author: PeratX, NycuRO
