@@ -56,6 +56,6 @@ public class ForestBiome extends GrassyBiome {
     }
     
     public void initBiome() {
-        register(NormalGenerator.BIRCH_FOREST : NormalGenerator.FOREST, this);
+        register(this.type == TYPE_BIRCH ? NormalGenerator.BIRCH_FOREST : NormalGenerator.FOREST);
     }
 }
