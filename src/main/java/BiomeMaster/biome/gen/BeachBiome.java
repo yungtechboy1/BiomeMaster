@@ -5,6 +5,7 @@ import cn.nukkit.block.BlockSand;
 import cn.nukkit.block.BlockSandstone;
 import cn.nukkit.level.generator.populator.PopulatorTallGrass;
 import BiomeMaster.biome.SandyBiome;
+import BiomeMaster.biome.NormalGenerator;
 
 /**
  * Author: PeratX, NycuRO
@@ -47,5 +48,9 @@ public class BeachBiome extends SandyBiome {
     @Override
     public int getColor() {
         return 0xfade85;
+    }
+    
+    public void initBiome() {
+        register(NormalGenerator.BEACH, this);
     }
 }
