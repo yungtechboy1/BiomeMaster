@@ -4,6 +4,9 @@ BiomeMaster is one plugin for Nukkit with improved Generator and a lot more feat
 Note: This is one plugin specialy **for Nukkit** (Not for Genisys, not for ClearSky, not for BukkitPE **or other software**, SO **NOT** COPY-PASTE OR TRANSLATE), for improve Generator ,for add more Biomes and other.
 This plugin is in development and not have all features like Spigot or Bukkit.
 
+
+**TravisCI Build Status** [![TravisCI](https://travis-ci.org/NycuRO/BiomeMaster.svg?branch=master)](https://travis-ci.org/NycuRO/BiomeMaster "TravisCI Build Status")
+
 ## Information
 
 - Need to communicate with us? Join our [GITTER](https://gitter.im/BiomeMaster/Lobby) group!
