@@ -26,19 +26,7 @@ public class NormalGenerator extends Generator {
     public static final int ROOFED_FOREST = 29;
     public static final int ROOFED_FOREST_M = 157;
     public static final int MUSHROOM_ISLAND = 14;
-    
-    public static final int OCEAN = 0;
-    public static final int PLAINS = 1;
-    public static final int DESERT = 2;
-    public static final int FOREST = 4;
-    public static final int TAIGA = 5;
     public static final int SWAMP = 6;
-    public static final int RIVER = 7;
-    public static final int ICE_PLAINS = 12;
-    public static final int BEACH = 16;
-    public static final int BIRCH_FOREST = 27;
-
-    public static final int MAX_BIOMES = 256;
 
     @Override
     public int getId() {
@@ -145,7 +133,6 @@ public class NormalGenerator extends Generator {
         this.selector.addBiome(Biome.getBiome(Biome.DESERT));
         this.selector.addBiome(Biome.getBiome(Biome.FOREST));
         this.selector.addBiome(Biome.getBiome(Biome.TAIGA));
-        this.selector.addBiome(Biome.getBiome(Biome.SWAMP));
         this.selector.addBiome(Biome.getBiome(Biome.RIVER));
         this.selector.addBiome(Biome.getBiome(Biome.ICE_PLAINS));
         this.selector.addBiome(Biome.getBiome(Biome.BIRCH_FOREST));
@@ -155,6 +142,7 @@ public class NormalGenerator extends Generator {
         this.selector.addBiome(Biome.getBiome(ROOFED_FOREST));
         this.selector.addBiome(Biome.getBiome(ROOFED_FOREST_M));
         this.selector.addBiome(Biome.getBiome(MUSHROOM_ISLAND));
+        this.selector.addBiome(Biome.getBiome(Biome.SWAMP));
 
         this.selector.recalculate();
 
