@@ -6,7 +6,7 @@ import cn.nukkit.block.BlockSapling;
 import cn.nukkit.level.generator.populator.PopulatorFlower;
 import cn.nukkit.level.generator.populator.PopulatorLilyPad;
 import BiomeMaster.populator.SwampTreePopulator;
-import cn.nukkit.level.generator.biome.GrassyBiome;
+import BiomeMaster.biome.GrassyBiome;
 import BiomeMaster.generator.NormalGenerator;
 
 public class SwamplandBiome extends GrassyBiome {
