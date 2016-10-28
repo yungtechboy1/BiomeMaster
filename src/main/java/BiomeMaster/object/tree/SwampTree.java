@@ -138,8 +138,11 @@ public class SwampTree extends TreeGenerator {
         }
     }
 
-    private void addHangingVine(ChunkManager worldIn, BlockVector3 pos, int meta) {
+    private void addVine(ChunkManager worldIn, BlockVector3 pos, int meta) {
         this.setBlockAndNotifyAdequately(worldIn, pos, new BlockVine(meta));
+    }
+
+    private void addHangingVine(ChunkManager worldIn, BlockVector3 pos, int meta) {
         this.addVine(worldIn, pos, meta);
         int i = 4;
 
