@@ -4,6 +4,7 @@ import cn.nukkit.block.Block;
 import cn.nukkit.block.BlockFlower;
 import cn.nukkit.level.generator.populator.*;
 import BiomeMaster.biome.GrassyBiome;
+import BiomeMaster.biome.NormalGenerator;
 
 /**
  * author: MagicDroidX
@@ -48,5 +49,9 @@ public class PlainBiome extends GrassyBiome {
     @Override
     public String getName() {
         return "Plains";
+    }
+    
+    public void initBiome() {
+        register(NormalGenerator.PLAINS, this);
     }
 }
