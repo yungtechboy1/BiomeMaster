@@ -27,6 +27,7 @@ public class BigTree extends TreeGenerator {
      * Sets the distance limit for how far away the generator will populate leaves from the base leaf node.
      */
     int leafDistanceLimit = 4;
+    List<BigTree.FoliageCoordinates> foliageCoords;
   
     public BigTree(boolean notify) {
         super(notify);
