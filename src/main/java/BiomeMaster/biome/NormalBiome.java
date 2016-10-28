@@ -6,7 +6,7 @@ import BiomeMaster.generator.NormalGenerator;
  * author: MagicDroidX
  * Nukkit Project
  */
-public abstract class NormalGenerator extends Biome {
+public abstract class NormalBiome extends NormalGenerator {
     @Override
     public int getColor() {
         return this.grassColor;
