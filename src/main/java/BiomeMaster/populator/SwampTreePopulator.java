@@ -1,6 +1,6 @@
 package BiomeMaster.populator;
 
-import BiomeMaster.object.tree.SwapTree;
+import BiomeMaster.object.tree.SwampTree;
 import cn.nukkit.block.Block;
 import cn.nukkit.block.BlockSapling;
 import cn.nukkit.level.ChunkManager;
