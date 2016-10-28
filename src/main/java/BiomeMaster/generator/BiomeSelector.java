@@ -28,7 +28,7 @@ public class BiomeSelector {
     public int lookup(double temperature, double rainfall) {
         if (rainfall < 0.25) {
             if (temperature < 0.9) {
-                return Biome.SWAMP;
+                return NormalGenerator.SWAMP;
             } else {
                 return NormalGenerator.SAVANNA;
             }
