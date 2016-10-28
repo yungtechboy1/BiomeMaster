@@ -4,7 +4,7 @@ import BiomeMaster.generator.NormalGenerator;
 import BiomeMaster.populator.JungleBigTreePopulator;
 import BiomeMaster.populator.JungleTreePopulator;
 import BiomeMaster.populator.PopulatorFern;
-import cn.nukkit.level.generator.biome.GrassyBiome;
+import BiomeMaster.biome.GrassyBiome;
 import cn.nukkit.level.generator.populator.PopulatorGrass;
 
 public class JungleBiome extends GrassyBiome {
