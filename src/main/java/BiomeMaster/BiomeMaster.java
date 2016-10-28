@@ -33,7 +33,7 @@ public class BiomeMaster extends PluginBase {
         new RoofedForestMBiome().initBiome();
         new RoofedForestBiome().initBiome();
         new MushroomIsland().initBiome();
-        new SwamplandIsland().initBiome();
+        new SwamplandBiome().initBiome();
 
         Generator.addGenerator(NormalGenerator.class, "normal", Generator.TYPE_INFINITE);
     }
