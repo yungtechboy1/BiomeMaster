@@ -37,7 +37,6 @@ public class BiomeMaster extends PluginBase {
         
         new BeachBiome().initBiome();
         new DesertBiome().initBiome();
-        new ForestBiome().initBiome();
         new IcePlainsBiome().initBiome();
         new OceanBiome().initBiome();
         new PlainBiome().initBiome();
