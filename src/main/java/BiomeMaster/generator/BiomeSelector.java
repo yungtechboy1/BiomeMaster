@@ -25,7 +25,7 @@ public class BiomeSelector {
         this.rainfall = new Simplex(random, 2.0f, 0.125f, 9.765625E-4f);
     }
 
-    public int lookup(double temperature, double rainfall) {
+    public int lookup(double temperature, double rainfall) { // need correct this
         if (rainfall < 0.25) {
             if (temperature < 0.9) {
                 return NormalGenerator.SWAMP;
@@ -49,16 +49,14 @@ public class BiomeSelector {
                 return NormalGenerator.BIRCH_FOREST;
             }
         } else {
-            if (temperature < 0.25) {
-                return NormalGenerator.MOUNTAINS;
-            } else if (temperature < 0.5) {
+            if (temperature < 0.5) {
                 return NormalGenerator.ROOFED_FOREST_M;
             } else if (temperature < 0.8) {
                 return NormalGenerator.ROOFED_FOREST;
             } else if (temperature < 1.3) {
                 return NormalGenerator.JUNGLE;
             } else {
-                return NormalGenerator.SMALL_MOUNTAINS;
+                return NormalGenerator.OCEAN;
             }
         }
     }
