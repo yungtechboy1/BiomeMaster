@@ -1,12 +1,12 @@
 package BiomeMaster.biome;
 
-import BiomeMaster.generator.NormalGenerator;
+import cn.nukkit.level.generator.biome.Biome;
 
 /**
  * author: MagicDroidX
  * Nukkit Project
  */
-public abstract class NormalBiome extends NormalGenerator {
+public abstract class NormalBiome extends Biome {
     @Override
     public int getColor() {
         return this.grassColor;
