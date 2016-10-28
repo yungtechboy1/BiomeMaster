@@ -45,6 +45,6 @@ public class SwamplandBiome extends GrassyBiome {
     }
     
     public void initBiome() {
-        register(BM_SWAMP, this);
+        register(NormalGenerator.SWAMP, this);
     }
 }
