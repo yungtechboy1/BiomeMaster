@@ -22,6 +22,13 @@ Thanks to all for help me. If you want to help me ,create PR's or tell me :)
 - Worlds: Generator has been improved and more biomes!
 - Little to no lag at all!
 
+## World Features
+
+- Swamp Trees with Swamp Biome like SinglePlayer
+- Acacia Trees with Savanna Biome like SinglePlayer
+- DarkOak Trees with Roofed Forest and Roofed Forest M like SinglePlayer
+- Big tree ( Oak and Jungle ) with Jungle Biome like SinglePlayer
+
 ## Upcoming Update
 
 - 0.1beta - Fix populators
