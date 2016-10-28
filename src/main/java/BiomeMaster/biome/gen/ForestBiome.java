@@ -5,7 +5,7 @@ import cn.nukkit.level.generator.populator.PopulatorGrass;
 import cn.nukkit.level.generator.populator.PopulatorTallGrass;
 import cn.nukkit.level.generator.populator.PopulatorTree;
 import BiomeMaster.biome.GrassyBiome;
-
+import BiomeMaster.biome.NormalGenerator;
 /**
  * author: MagicDroidX
  * Nukkit Project
@@ -53,5 +53,9 @@ public class ForestBiome extends GrassyBiome {
     @Override
     public String getName() {
         return this.type == TYPE_BIRCH ? "Birch Forest" : "Forest";
+    }
+    
+    public void initBiome() {
+        register(NormalGenerator.BIRCH_FOREST : NormalGenerator.FOREST, this);
     }
 }
