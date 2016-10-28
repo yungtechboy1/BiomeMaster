@@ -1,6 +1,6 @@
 package BiomeMaster;
 
-import BiomeMaster.biome.*;
+import BiomeMaster.biome.gen.*;
 import BiomeMaster.generator.NormalGenerator;
 import cn.nukkit.level.generator.Generator;
 import cn.nukkit.plugin.PluginBase;
