@@ -12,7 +12,7 @@ import cn.nukkit.math.NukkitRandom;
 import cn.nukkit.math.Vector3;
 import cn.nukkit.math.BlockVector3;
 
-abstract class BigTree extends TreeGenerator {
+public class BigTree extends TreeGenerator {
     private Random rand;
     int heightLimit;
     int height;
