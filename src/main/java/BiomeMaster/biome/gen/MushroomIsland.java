@@ -5,8 +5,8 @@ import BiomeMaster.populator.MushroomPopulator;
 import cn.nukkit.block.Block;
 import cn.nukkit.block.BlockDirt;
 import cn.nukkit.block.BlockMycelium;
-import cn.nukkit.level.generator.biome.CaveBiome;
-import cn.nukkit.level.generator.biome.NormalBiome;
+import BiomeMaster.biome.CaveBiome;
+import BiomeMaster.biome.NormalBiome;
 
 public class MushroomIsland extends NormalBiome implements CaveBiome {
 
