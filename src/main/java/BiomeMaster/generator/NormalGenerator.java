@@ -26,7 +26,7 @@ public class NormalGenerator extends Generator {
     public static final int ROOFED_FOREST = 29;
     public static final int ROOFED_FOREST_M = 157;
     public static final int MUSHROOM_ISLAND = 14;
-    public static final int BM_SWAMP = 6;
+    public static final int SWAMP = 6;
 
     @Override
     public int getId() {
@@ -142,7 +142,7 @@ public class NormalGenerator extends Generator {
         this.selector.addBiome(Biome.getBiome(ROOFED_FOREST));
         this.selector.addBiome(Biome.getBiome(ROOFED_FOREST_M));
         this.selector.addBiome(Biome.getBiome(MUSHROOM_ISLAND));
-        this.selector.addBiome(Biome.getBiome(BM_SWAMP));
+        this.selector.addBiome(Biome.getBiome(SWAMP));
 
         this.selector.recalculate();
 
