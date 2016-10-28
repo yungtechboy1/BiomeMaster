@@ -44,18 +44,22 @@ public class ForestBiome extends GrassyBiome {
         if (type == TYPE_BIRCH) {
             this.temperature = 0.6f;
             this.rainfall = 0.6f;
+            
+            public void initBiome() {
+                register(NormalGenerator.BIRCH_FOREST, this);
+            }
         } else {
             this.temperature = 0.7f;
             this.rainfall = 0.8f;
+            
+            public void initBiome() {
+                register(NormalGenerator.FOREST, this);
+            }
         }
     }
 
     @Override
     public String getName() {
         return this.type == TYPE_BIRCH ? "Birch Forest" : "Forest";
-    }
-    
-    public void initBiome() {
-        register(this.type == TYPE_BIRCH ? NormalGenerator.BIRCH_FOREST : NormalGenerator.FOREST);
     }
 }
