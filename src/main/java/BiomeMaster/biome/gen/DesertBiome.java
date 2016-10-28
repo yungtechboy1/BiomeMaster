@@ -1,5 +1,7 @@
 package BiomeMaster.biome.gen;
 
+import BiomeMaster.biome.SandyBiome;
+
 /**
  * author: MagicDroidX
  * Nukkit Project
