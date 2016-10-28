@@ -6,6 +6,7 @@ import cn.nukkit.block.BlockSapling;
 import cn.nukkit.level.generator.populator.PopulatorFlower;
 import cn.nukkit.level.generator.populator.PopulatorLilyPad;
 import BiomeMaster.populator.SwampTreePopulator;
+import cn.nukkit.level.generator.biome.GrassyBiome;
 
 public class SwamplandBiome extends GrassyBiome {
 
@@ -15,7 +16,7 @@ public class SwamplandBiome extends GrassyBiome {
         PopulatorLilyPad lilypad = new PopulatorLilyPad();
         lilypad.setBaseAmount(4);
 
-        PopulatorTree trees = new SwampTreePopulator();
+        SwampTreePopulator trees = new SwampTreePopulator();
         trees.setBaseAmount(2);
 
         PopulatorFlower flower = new PopulatorFlower();
