@@ -26,6 +26,19 @@ public class NormalGenerator extends Generator {
     public static final int ROOFED_FOREST = 29;
     public static final int ROOFED_FOREST_M = 157;
     public static final int MUSHROOM_ISLAND = 14;
+    
+    public static final int OCEAN = 0;
+    public static final int PLAINS = 1;
+    public static final int DESERT = 2;
+    public static final int FOREST = 4;
+    public static final int TAIGA = 5;
+    public static final int SWAMP = 6;
+    public static final int RIVER = 7;
+    public static final int ICE_PLAINS = 12;
+    public static final int BEACH = 16;
+    public static final int BIRCH_FOREST = 27;
+
+    public static final int MAX_BIOMES = 256;
 
     @Override
     public int getId() {
@@ -65,7 +78,10 @@ public class NormalGenerator extends Generator {
     private final int basegroundHeight = 3;
     private int waterColor = 16777215;
     //private boolean enableSnow; Coming soon
-
+    
+    protected float rainfall = 0.5F;
+    protected float temperature = 0.5F;
+    protected int grassColor = 0;
 
     public NormalGenerator() {
         this(new HashMap<>());
@@ -133,6 +149,7 @@ public class NormalGenerator extends Generator {
         this.selector.addBiome(Biome.getBiome(Biome.RIVER));
         this.selector.addBiome(Biome.getBiome(Biome.ICE_PLAINS));
         this.selector.addBiome(Biome.getBiome(Biome.BIRCH_FOREST));
+        
         this.selector.addBiome(Biome.getBiome(JUNGLE));
         this.selector.addBiome(Biome.getBiome(SAVANNA));
         this.selector.addBiome(Biome.getBiome(ROOFED_FOREST));
