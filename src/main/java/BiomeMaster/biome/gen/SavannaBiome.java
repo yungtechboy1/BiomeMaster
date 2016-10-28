@@ -1,4 +1,4 @@
-package BiomeMaster.biome;
+package BiomeMaster.biome.gen;
 
 import BiomeMaster.generator.NormalGenerator;
 import BiomeMaster.populator.SavannaTreePopulator;
