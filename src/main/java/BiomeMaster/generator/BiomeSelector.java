@@ -17,12 +17,12 @@ public class BiomeSelector {
 
     private final Map<Integer, Biome> biomes = new HashMap<>();
 
-    private int[] map = new int[64 * 64];
+    private int[] map = new int[4096];
 
     public BiomeSelector(NukkitRandom random, Biome fallback) {
         this.fallback = fallback;
-        this.temperature = new Simplex(random, 2F, 1F / 8F, 1F / 1024F);
-        this.rainfall = new Simplex(random, 2F, 1F / 8F, 1F / 1024F);
+        this.temperature = new Simplex(random, 2.0f, 0.125f, 9.765625E-4f);
+        this.rainfall = new Simplex(random, 2.0f, 0.125f, 9.765625E-4f);
     }
 
     public int lookup(double temperature, double rainfall) {
@@ -64,33 +64,33 @@ public class BiomeSelector {
     }
 
     public void recalculate() {
-        this.map = new int[64 * 64];
-        for (int i = 0; i < 64; ++i) {
-            for (int j = 0; j < 64; ++j) {
-                this.map[i + (j << 6)] = this.lookup(i / 63d, j / 63d);
+        this.map = new int[4096];
+        for(int i = 0; i < 64; ++i) {
+            for(int j = 0; j < 64; ++j) {
+                this.map[i + (j << 6)] = this.lookup((double)i / 63.0f, (double)j / 63.0f);
             }
         }
     }
 
     public void addBiome(Biome biome) {
-        this.biomes.put(biome.getId(), biome);
+        this.biomes.put(Integer.valueOf(biome.getId()), biome);
     }
 
     public double getTemperature(double x, double z) {
-        return (this.temperature.noise2D(x, z, true) + 1) / 2;
+        return (this.temperature.noise2D(x, z, true) + 1.0f) / 2.0f;
     }
 
     public double getRainfall(double x, double z) {
-        return (this.rainfall.noise2D(x, z, true) + 1) / 2;
+        return (this.rainfall.noise2D(x, z, true) + 1.0f) / 2.0f;
     }
 
     public Biome pickBiome(double x, double z) {
-        int temperature = (int) (this.getTemperature(x, z) * 63);
-        int rainfall = (int) (this.getRainfall(x, z) * 63);
+        int temperature = (int)(this.getTemperature(x, z) * 63.0f);
+        int rainfall = (int)(this.getRainfall(x, z) * 63.0f);
 
         //System.out.println("temperature: "+temperature+"     rainfall: "+rainfall);
 
         int biomeId = this.map[temperature + (rainfall << 6)];
-        return this.biomes.containsKey(biomeId) ? this.biomes.get(biomeId) : this.fallback;
+        return this.biomes.containsKey(Integer.valueOf(biomeId))?(Biome)this.biomes.get(Integer.valueOf(biomeId)):this.fallback;
     }
 }
