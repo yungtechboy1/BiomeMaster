@@ -49,9 +49,9 @@ public class BigTree extends TreeGenerator {
             i = 1;
         }
 
-        int j = position.getY() + this.height;
+        int j = position.getFloorY() + this.height;
         int k = this.heightLimit - this.leafDistanceLimit;
-        this.foliageCoords = Lists.<BigTree.FoliageCoordinates>newArrayList();
+        int this.foliageCoords = Lists.<BigTree.FoliageCoordinates>newArrayList();
         this.foliageCoords.add(new BigTree.FoliageCoordinates(position.getSide(Vector3.SIDE_UP, k), j));
 
         for (; k >= 0; --k) {
@@ -151,14 +151,14 @@ public class BigTree extends TreeGenerator {
     /**
      * Returns the absolute greatest distance in the BlockPos object.
      */
-    private int getGreatestDistance(BlockPos posIn) {
+    private int getGreatestDistance(Vector3 posIn) {
         int i = MathHelper.abs_int(posIn.getX());
         int j = MathHelper.abs_int(posIn.getY());
         int k = MathHelper.abs_int(posIn.getZ());
         return k > i && k > j ? k : (j > i ? j : i);
     }
 
-    private BlockLog.EnumAxis getLogAxis(BlockPos p_175938_1_, BlockPos p_175938_2_) {
+    private BlockLog.EnumAxis getLogAxis(Vector3 p_175938_1_, Vector3 p_175938_2_) {
         BlockLog.EnumAxis blocklog$enumaxis = BlockLog.EnumAxis.Y;
         int i = Math.abs(p_175938_2_.getX() - p_175938_1_.getX());
         int j = Math.abs(p_175938_2_.getZ() - p_175938_1_.getZ());
