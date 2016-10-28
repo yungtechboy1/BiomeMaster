@@ -5,6 +5,7 @@ import cn.nukkit.level.generator.populator.PopulatorSugarcane;
 import cn.nukkit.level.generator.populator.PopulatorTallGrass;
 import cn.nukkit.level.generator.populator.PopulatorTallSugarcane;
 import BiomeMaster.biome.WateryBiome;
+import BiomeMaster.biome.NormalGenerator;
 
 /**
  * author: MagicDroidX
@@ -40,5 +41,9 @@ public class RiverBiome extends WateryBiome {
     @Override
     public String getName() {
         return "River";
+    }
+    
+    public void initBiome() {
+        register(NormalGenerator.RIVER, this);
     }
 }
