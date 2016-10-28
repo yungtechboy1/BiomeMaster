@@ -35,8 +35,7 @@ public class BigTree extends TreeGenerator {
     /**
      * Generates a list of leaf nodes for the tree, to be populated by generateLeaves.
      */
-    void generateLeafNodeList()
-    {
+    void generateLeafNodeList() {
         this.height = (int)((double)this.heightLimit * this.heightAttenuation);
 
         if (this.height >= this.heightLimit) {
@@ -51,7 +50,7 @@ public class BigTree extends TreeGenerator {
 
         int j = position.getFloorY() + this.height;
         int k = this.heightLimit - this.leafDistanceLimit;
-        int this.foliageCoords = Lists.<BigTree.FoliageCoordinates>newArrayList();
+        this.foliageCoords = Lists.<BigTree.FoliageCoordinates>newArrayList();
         this.foliageCoords.add(new BigTree.FoliageCoordinates(position.getSide(Vector3.SIDE_UP, k), j));
 
         for (; k >= 0; --k) {
