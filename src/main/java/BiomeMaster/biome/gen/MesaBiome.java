@@ -1,6 +1,6 @@
 package BiomeMaster.biome.gen;
 
-import cn.nukkit.level.generator.biome.SandyBiome;
+import BiomeMaster.biome.SandyBiome;
 
 public class MesaBiome extends SandyBiome {
 
