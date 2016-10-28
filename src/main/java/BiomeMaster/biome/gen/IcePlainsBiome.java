@@ -4,6 +4,7 @@ import cn.nukkit.block.BlockSapling;
 import cn.nukkit.level.generator.populator.PopulatorTallGrass;
 import cn.nukkit.level.generator.populator.PopulatorTree;
 import BiomeMaster.biome.SnowyBiome;
+import BiomeMaster.biome.NormalGenerator;
 
 /**
  * author: MagicDroidX
@@ -29,5 +30,9 @@ public class IcePlainsBiome extends SnowyBiome {
 
     public String getName() {
         return "Ice Plains";
+    }
+    
+    public void initBiome() {
+        register(NormalGenerator.ICE_PLAINS, this);
     }
 }
