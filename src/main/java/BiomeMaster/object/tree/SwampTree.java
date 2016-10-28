@@ -23,7 +23,7 @@ public class SwampTree extends TreeGenerator {
     public boolean generate(ChunkManager worldIn, NukkitRandom rand, Vector3 vectorPosition) {
         BlockVector3 position = new BlockVector3(vectorPosition.getFloorX(), vectorPosition.getFloorY(), vectorPosition.getFloorZ());
 
-        int i = rand.nextInt(4) + 5;
+        int i = rand.nextBoundedInt(4) + 5;
         boolean flag = true;
 
         if (position.getY() >= 1 && position.getY() + i + 1 <= 256) {
@@ -35,7 +35,7 @@ public class SwampTree extends TreeGenerator {
                 }
 
                 if (j >= position.getY() + 1 + i - 2) {
-                    k = 2;
+                    k = 3;
                 }
 
                 BlockVector3 pos2 = new BlockVector3();
@@ -64,7 +64,7 @@ public class SwampTree extends TreeGenerator {
                     this.setDirtAt(worldIn, down);
 
                     for (int k1 = position.getY() - 3 + i; k1 <= position.getY() + i; ++k1) {
-                        int i2 = k1 - (position.getY() + i);
+                        int j2 = k1 - (position.getY() + i);
                         int l2 = 2 - j2 / 2;
 
                         for (int j3 = position.getX() - l2; j3 <= position.getX() + l2; ++j3) {
