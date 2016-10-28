@@ -34,23 +34,23 @@ public class BiomeSelector {
             }
         } else if (rainfall < 0.60) {
             if (temperature < 0.25) {
-                return Biome.ICE_PLAINS;
+                return NormalGenerator.ICE_PLAINS;
             } else if (temperature < 0.75) {
-                return Biome.PLAINS;
+                return NormalGenerator.PLAINS;
             } else {
-                return Biome.DESERT;
+                return NormalGenerator.DESERT;
             }
         } else if (rainfall < 0.80) {
             if (temperature < 0.25) {
-                return Biome.TAIGA;
+                return NormalGenerator.TAIGA;
             } else if (temperature < 0.75) {
-                return Biome.FOREST;
+                return NormalGenerator.FOREST;
             } else {
-                return Biome.BIRCH_FOREST;
+                return NormalGenerator.BIRCH_FOREST;
             }
         } else {
             if (temperature < 0.25) {
-                return Biome.MOUNTAINS;
+                return NormalGenerator.MOUNTAINS;
             } else if (temperature < 0.5) {
                 return NormalGenerator.ROOFED_FOREST_M;
             } else if (temperature < 0.8) {
@@ -58,7 +58,7 @@ public class BiomeSelector {
             } else if (temperature < 1.3) {
                 return NormalGenerator.JUNGLE;
             } else {
-                return Biome.SMALL_MOUNTAINS;
+                return NormalGenerator.SMALL_MOUNTAINS;
             }
         }
     }
