@@ -54,15 +54,18 @@ public class NormalGenerator extends Generator {
 
     private int heightOffset;
 
-    private final int seaHeight = 62;
+    private final int seaHeight = 64;
     private final int seaFloorHeight = 48;
     private final int beathStartHeight = 60;
     private final int beathStopHeight = 64;
     private final int bedrockDepth = 5;
     private final int seaFloorGenerateRange = 5;
-    private final int landHeightRange = 18; // 36 / 2
-    private final int mountainHeight = 13; // 26 / 2
+    private final int landHeightRange = 18;
+    private final int mountainHeight = 13;
     private final int basegroundHeight = 3;
+    private int waterColor = 16777215;
+    //private boolean enableSnow; Coming soon
+
 
     public NormalGenerator() {
         this(new HashMap<>());
@@ -124,13 +127,11 @@ public class NormalGenerator extends Generator {
         this.selector.addBiome(Biome.getBiome(Biome.OCEAN));
         this.selector.addBiome(Biome.getBiome(Biome.PLAINS));
         this.selector.addBiome(Biome.getBiome(Biome.DESERT));
-        this.selector.addBiome(Biome.getBiome(Biome.MOUNTAINS));
         this.selector.addBiome(Biome.getBiome(Biome.FOREST));
         this.selector.addBiome(Biome.getBiome(Biome.TAIGA));
         this.selector.addBiome(Biome.getBiome(Biome.SWAMP));
         this.selector.addBiome(Biome.getBiome(Biome.RIVER));
         this.selector.addBiome(Biome.getBiome(Biome.ICE_PLAINS));
-        this.selector.addBiome(Biome.getBiome(Biome.SMALL_MOUNTAINS));
         this.selector.addBiome(Biome.getBiome(Biome.BIRCH_FOREST));
         this.selector.addBiome(Biome.getBiome(JUNGLE));
         this.selector.addBiome(Biome.getBiome(SAVANNA));
