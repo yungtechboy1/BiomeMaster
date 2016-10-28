@@ -3,6 +3,7 @@ package BiomeMaster.biome.gen;
 import cn.nukkit.block.Block;
 import cn.nukkit.block.BlockFlower;
 import cn.nukkit.level.generator.populator.*;
+import BiomeMaster.biome.GrassyBiome;
 
 /**
  * author: MagicDroidX
