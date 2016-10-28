@@ -4,6 +4,7 @@ import cn.nukkit.block.Block;
 import cn.nukkit.level.generator.populator.PopulatorSugarcane;
 import cn.nukkit.level.generator.populator.PopulatorTallSugarcane;
 import BiomeMaster.biome.WateryBiome;
+import BiomeMaster.biome.NormalGenerator;
 
 /**
  * author: MagicDroidX
@@ -35,5 +36,9 @@ public class OceanBiome extends WateryBiome {
     @Override
     public String getName() {
         return "Ocean";
+    }
+    
+    public void initBiome() {
+        register(NormalGenerator.OCEAN, this);
     }
 }
