@@ -4,7 +4,7 @@ import cn.nukkit.block.Block;
 import cn.nukkit.block.BlockFlower;
 import cn.nukkit.level.generator.populator.*;
 import BiomeMaster.biome.GrassyBiome;
-import BiomeMaster.biome.NormalGenerator;
+import BiomeMaster.generator.NormalGenerator;
 
 /**
  * author: MagicDroidX
