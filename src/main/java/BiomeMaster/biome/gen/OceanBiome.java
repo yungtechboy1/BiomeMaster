@@ -3,7 +3,7 @@ package BiomeMaster.biome.gen;
 import cn.nukkit.block.Block;
 import cn.nukkit.level.generator.populator.PopulatorSugarcane;
 import cn.nukkit.level.generator.populator.PopulatorTallSugarcane;
-import BiomeMaster.biome.WateryBiome.java
+import BiomeMaster.biome.WateryBiome;
 
 /**
  * author: MagicDroidX
