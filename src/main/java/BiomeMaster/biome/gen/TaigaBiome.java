@@ -4,6 +4,7 @@ import cn.nukkit.block.BlockSapling;
 import cn.nukkit.level.generator.populator.PopulatorGrass;
 import cn.nukkit.level.generator.populator.PopulatorTallGrass;
 import cn.nukkit.level.generator.populator.PopulatorTree;
+import BiomeMaster.biome.SnowyBiome;
 
 /**
  * author: MagicDroidX
