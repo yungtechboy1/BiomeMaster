@@ -5,6 +5,7 @@ import cn.nukkit.level.generator.populator.PopulatorGrass;
 import cn.nukkit.level.generator.populator.PopulatorTallGrass;
 import cn.nukkit.level.generator.populator.PopulatorTree;
 import BiomeMaster.biome.SnowyBiome;
+import BiomeMaster.biome.NormalGenerator;
 
 /**
  * author: MagicDroidX
@@ -37,5 +38,9 @@ public class TaigaBiome extends SnowyBiome {
     @Override
     public String getName() {
         return "Taiga";
+    }
+    
+    public void initBiome() {
+        register(NormalGenerator.TAIGA, this);
     }
 }
