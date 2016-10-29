@@ -83,7 +83,7 @@ public class NormalGenerator extends Generator {
     protected int grassColor = 0;
     
     private static GAUSSIAN_KERNEL = null;
-	private static SMOOTH_SIZE = 2;
+    private static SMOOTH_SIZE = 2;
 
     public NormalGenerator() {
         this(new HashMap<>());
