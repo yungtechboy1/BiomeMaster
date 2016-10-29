@@ -29,8 +29,8 @@ public class SavannaBiome extends GrassyBiome {
         this.addPopulator(flower);
 
         this.setElevation(62, 68);
-        this.temperature = 1.2;
-        this.rainfall = 0;
+        this.temperature = 1.2f;
+        this.rainfall = 0.0f;
     }
 
     @Override
