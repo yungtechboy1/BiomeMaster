@@ -1,17 +1,13 @@
 package BiomeMaster.populator.trees;
 
+import BiomeMaster.object.tree.SwampTree;
 import cn.nukkit.block.Block;
 import cn.nukkit.block.BlockSapling;
 import cn.nukkit.level.ChunkManager;
-import cn.nukkit.level.generator.object.tree.ObjectTree;
 import cn.nukkit.math.NukkitMath;
 import cn.nukkit.math.NukkitRandom;
 import cn.nukkit.level.generator.populator.Populator;
 
-/**
- * author: MagicDroidX
- * Nukkit Project
- */
 public class SwampTreePopulator extends Populator {
     private ChunkManager level;
     private int randomAmount;
@@ -39,6 +35,7 @@ public class SwampTreePopulator extends Populator {
     public void populate(ChunkManager level, int chunkX, int chunkZ, NukkitRandom random) {
         this.level = level;
         int amount = random.nextBoundedInt(this.randomAmount + 1) + this.baseAmount;
+        Vector3 v = new Vector3();
         for (int i = 0; i < amount; ++i) {
             int x = NukkitMath.randomRange(random, chunkX << 4, (chunkX << 4) + 15);
             int z = NukkitMath.randomRange(random, chunkZ << 4, (chunkZ << 4) + 15);
