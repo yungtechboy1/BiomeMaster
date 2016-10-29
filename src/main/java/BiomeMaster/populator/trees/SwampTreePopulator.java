@@ -1,11 +1,9 @@
 package BiomeMaster.populator.trees;
 
 import BiomeMaster.object.tree.SwampTree;
-import cn.nukkit.block.Block;
-import cn.nukkit.block.BlockSapling;
+import cn.nukkit.block.*;
+import cn.nukkit.math.*;
 import cn.nukkit.level.ChunkManager;
-import cn.nukkit.math.NukkitMath;
-import cn.nukkit.math.NukkitRandom;
 import cn.nukkit.level.generator.populator.Populator;
 
 public class SwampTreePopulator extends Populator {
