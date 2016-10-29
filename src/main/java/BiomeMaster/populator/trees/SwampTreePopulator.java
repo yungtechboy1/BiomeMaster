@@ -41,7 +41,7 @@ public class SwampTreePopulator extends Populator {
             if (y == -1) {
                 continue;
             }
-            new SwampTree(type).generate(level, random, v.setComponents(x, y, z));
+            new JungleTree(random.nextBoundedInt(2)).generate(level, random, v.setComponents(x, y, z));
         }
     }
 
