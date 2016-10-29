@@ -59,7 +59,7 @@ public class BiomeSelector {
                 return NormalGenerator.MUSHROOM_ISLAND;
             }
         } else if (temperature == 0.0f) {
-            if (rainfall = 0.5f) {
+            if (rainfall < 0.5f) {
                 return NormalGenerator.ICE_PLAINS;
             }
         } else if (temperature < 0.7f) {
