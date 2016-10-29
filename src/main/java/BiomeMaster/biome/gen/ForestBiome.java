@@ -12,21 +12,10 @@ import BiomeMaster.generator.NormalGenerator;
  */
 
 public class ForestBiome extends GrassyBiome {
-    public static final int TYPE_NORMAL = 0;
-    public static final int TYPE_BIRCH = 1;
-
-    public final int type;
-
     public ForestBiome() {
-        this(TYPE_NORMAL);
-    }
-
-    public ForestBiome(int type) {
         super();
 
-        this.type = type;
-
-        PopulatorTree trees = new PopulatorTree(type == TYPE_BIRCH ? BlockSapling.BIRCH : BlockSapling.OAK);
+        PopulatorTree trees = new PopulatorTree(BlockSapling.OAK);
         trees.setBaseAmount(5);
         this.addPopulator(trees);
 
@@ -38,22 +27,20 @@ public class ForestBiome extends GrassyBiome {
         tallGrass.setBaseAmount(3);
 
         this.addPopulator(tallGrass);
-
+        
         this.setElevation(63, 81);
-
-        if (type == TYPE_BIRCH) {
-            this.temperature = 0.6f;
-            this.rainfall = 0.6f;
-            //register(NormalGenerator.BIRCH_FOREST, this);
-        } else {
-            this.temperature = 0.7f;
-            this.rainfall = 0.8f;
-            //register(NormalGenerator.FOREST, this);
+        
+        this.temperature = 0.7f;
+        this.rainfall = 0.8f;
         }
     }
 
     @Override
     public String getName() {
-        return this.type == TYPE_BIRCH ? "Birch Forest" : "Forest";
+        return "Forest";
+    }
+
+    public void initBiome() {
+        register(NormalGenerator.FOREST, this);
     }
 }
