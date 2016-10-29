@@ -13,7 +13,7 @@ import BiomeMaster.generator.NormalGenerator;
 
 public class BirchForestBiome extends GrassyBiome {
 
-    public ForestBiome() {
+    public BirchForestBiome() {
         super();
 
         PopulatorTree trees = new PopulatorTree(BlockSapling.BIRCH);
