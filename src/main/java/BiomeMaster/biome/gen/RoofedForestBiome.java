@@ -1,8 +1,8 @@
 package BiomeMaster.biome.gen;
 
 import BiomeMaster.generator.NormalGenerator;
-import BiomeMaster.populator.DarkOakTreePopulator;
-import BiomeMaster.populator.MushroomPopulator;
+import BiomeMaster.populator.trees.DarkOakTreePopulator;
+import BiomeMaster.populator.mushroom.MushroomPopulator;
 import BiomeMaster.biome.GrassyBiome;
 import cn.nukkit.level.generator.populator.PopulatorFlower;
 import cn.nukkit.level.generator.populator.PopulatorGrass;
