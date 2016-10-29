@@ -89,8 +89,11 @@ public class NormalGenerator extends Generator {
         this(new HashMap<>());
     }
 
-    public NormalGenerator(Map<String, Object> options) {
-        //Nothing here. Just used for future update.
+    public NormalGenerator(array options) {
+	super();
+	if (self.GAUSSIAN_KERNEL == null){
+		self::generateKernel();
+	}
     }
 
     @Override
