@@ -71,6 +71,7 @@ public class BiomeSelector {
         } else {
             return NormalGenerator.ROOFED_FOREST_M;
         }
+    return NormalGenerator.OCEAN;
     }
 
     public void recalculate() {
