@@ -8,8 +8,7 @@ import cn.nukkit.level.generator.biome.Biome;
 import cn.nukkit.level.generator.noise.Simplex;
 import cn.nukkit.level.generator.object.ore.OreType;
 import cn.nukkit.level.generator.populator.*;
-import cn.nukkit.math.NukkitRandom;
-import cn.nukkit.math.Vector3;
+import cn.nukkit.math.*;
 
 import java.util.*;
 
@@ -82,6 +81,9 @@ public class NormalGenerator extends Generator {
     protected float rainfall = 0.5F;
     protected float temperature = 0.5F;
     protected int grassColor = 0;
+    
+    private static GAUSSIAN_KERNEL = null;
+	private static SMOOTH_SIZE = 2;
 
     public NormalGenerator() {
         this(new HashMap<>());
@@ -105,6 +107,20 @@ public class NormalGenerator extends Generator {
     public Map<String, Object> getSettings() {
         return new HashMap<>();
     }
+    
+    private static generateKernel() {
+		self.GAUSSIAN_KERNEL = [];
+		bellSize = 1 / self.SMOOTH_SIZE;
+		bellHeight = 2 * self.SMOOTH_SIZE;
+		for (sx = -self.SMOOTH_SIZE; sx <= self.SMOOTH_SIZE; ++sx) {
+			self.GAUSSIAN_KERNEL[sx + self.SMOOTH_SIZE] = [];
+			for (sz = -self.SMOOTH_SIZE; sz <= self.SMOOTH_SIZE; ++sz) {
+				bx = bellSize * sx;
+				bz = bellSize * sz;
+				self.GAUSSIAN_KERNEL[sx + self.SMOOTH_SIZE][sz + self.SMOOTH_SIZE] = bellHeight * exp(-(bx * bx + bz * bz) / 2);
+			}
+		}
+	}
 
     public Biome pickBiome(int x, int z) {
         long hash = x * 2345803 ^ z * 9236449 ^ this.level.getSeed();
@@ -282,10 +298,35 @@ public class NormalGenerator extends Generator {
                     }
                 }
                 chunk.setBiomeId(genx, genz, biome.getId());
-                //biome color
-                //todo: smooth chunk color
+                color = [0, 0, 0];
+                for (int sx = -self.SMOOTH_SIZE; sx <= self.SMOOTH_SIZE; ++sx) {
+					for(int sz = -self.SMOOTH_SIZE; sz <= self.SMOOTH_SIZE; ++sz) {
+						int weight = self.GAUSSIAN_KERNEL[sx + self.SMOOTH_SIZE][sz + self.SMOOTH_SIZE];
+						if (sx == 0 && sz == 0){
+							adjacent = biome;
+						} else {
+							BlockVector3 index = Level.chunkHash(chunkX * 16 + genx + sx, chunkZ * 16 + genz + sz);
+							if (biomeCache[index] != null){
+								adjacent = biomeCache[index];
+							} else {
+								biomeCache[index] = adjacent = this.pickBiome(chunkX * 16 + genx + sx, chunkZ * 16 + genz + sz);
+							}
+						}
+						int minSum += (adjacent.getMinElevation() - 1) * weight;
+						int maxSum += adjacent.getMaxElevation() * weight;
+						bColor = adjacent.getColor();
+						color[0] += ((bColor >> 16) ** 2) * weight;
+						color[1] += (((bColor >> 8) & 0xff) ** 2) * weight;
+						color[2] += ((bColor & 0xff) ** 2) * weight;
+						weightSum += weight;
+					}
+				}
+                
+                minSum /= weightSum;
+				maxSum /= weightSum;
+                
                 int biomecolor = biome.getColor();
-                chunk.setBiomeColor(genx, genz, (biomecolor >> 16), (biomecolor >> 8) & 0xff, (biomecolor & 0xff));
+                chunk.setBiomeColor(genx, genz, Math.sqrt(color[0] / weightSum), Math.sqrt(color[1] / weightSum), Math.sqrt(color[2] / weightSum));
                 //generating
                 int generateHeight = genyHeight > seaHeight ? genyHeight : seaHeight;
                 for (int geny = 0; geny <= generateHeight; geny++) {
