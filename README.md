@@ -28,6 +28,7 @@ Thanks to all for help me. If you want to help me ,create PR's or tell me :)
 - Acacia Trees with Savanna Biome like SinglePlayer
 - DarkOak Trees with Roofed Forest and Roofed Forest M like SinglePlayer
 - Big tree ( Oak and Jungle ) with Jungle Biome like SinglePlayer
+- Diorite, Andesite and Granite in WorldGenerator
 
 ## Upcoming Update
 
