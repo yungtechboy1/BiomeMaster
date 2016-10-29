@@ -1,7 +1,7 @@
 package BiomeMaster.biome.gen;
 
 import BiomeMaster.generator.NormalGenerator;
-import BiomeMaster.populator.MushroomPopulator;
+import BiomeMaster.populator.mushroom.MushroomPopulator;
 import cn.nukkit.block.Block;
 import cn.nukkit.block.BlockDirt;
 import cn.nukkit.block.BlockMycelium;
