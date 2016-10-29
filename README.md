@@ -21,6 +21,7 @@ Thanks to all for help me. If you want to help me ,create PR's or tell me :)
 
 - Worlds: Generator has been improved and more biomes!
 - Little to no lag at all!
+- Correct generation with RainFall and Temperature fixed
 
 ## World Features
 
