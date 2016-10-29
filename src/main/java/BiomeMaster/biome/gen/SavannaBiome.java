@@ -1,7 +1,7 @@
 package BiomeMaster.biome.gen;
 
 import BiomeMaster.generator.NormalGenerator;
-import BiomeMaster.populator.SavannaTreePopulator;
+import BiomeMaster.populator.trees.SavannaTreePopulator;
 import cn.nukkit.block.BlockSapling;
 import BiomeMaster.biome.GrassyBiome;
 import cn.nukkit.level.generator.populator.PopulatorFlower;
