@@ -173,14 +173,17 @@ public class NormalGenerator extends Generator {
 
         PopulatorOre ores = new PopulatorOre();
         ores.setOreTypes(new OreType[]{
-                new OreType(new BlockOreCoal(), 20, 16, 0, 128),
-                new OreType(new BlockOreIron(), 25, 10, 0, 64),
-                new OreType(new BlockOreRedstone(), 8, 7, 0, 16),
-                new OreType(new BlockOreLapis(), 10, 6, 0, 32),
-                new OreType(new BlockOreGold(), 8, 10, 0, 32),
-                new OreType(new BlockOreDiamond(), 13, 7, 0, 16),
-                new OreType(new BlockDirt(), 20, 32, 0, 128),
-                new OreType(new BlockGravel(), 10, 16, 0, 128)
+                new OreType(new BlockOreCoal(), 20, 17, 0, 128),
+                new OreType(new BlockOreIron(), 20, 9, 0, 64),
+                new OreType(new BlockOreRedstone(), 8, 8, 0, 16),
+                new OreType(new BlockOreLapis(), 1, 7, 0, 16),
+                new OreType(new BlockOreGold(), 2, 9, 0, 32),
+                new OreType(new BlockOreDiamond(), 1, 8, 0, 16),
+                new OreType(new BlockDirt(), 10, 33, 0, 128),
+                new OreType(new BlockGravel(), 8, 33, 0, 128)
+                new OreType(new BlockDiorite(), 10, 33, 0, 80)
+                new OreType(new BlockAndesite(), 10, 33, 0, 80)
+                new OreType(new BlockGranite(), 10, 33, 0, 80)
         });
         this.populators.add(ores);
     }
