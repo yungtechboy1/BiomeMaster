@@ -39,4 +39,8 @@ public class BirchForestBiome extends GrassyBiome {
     public String getName() {
         return "Birch Forest";
     }
+    
+    public void initBiome() {
+        register(NormalGenerator.BIRCH_FOREST, this);
+    }
 }
