@@ -1,4 +1,4 @@
-package BiomeMaster.populator;
+package BiomeMaster.populator.biomes;
 
 import cn.nukkit.block.Block;
 import cn.nukkit.level.ChunkManager;
