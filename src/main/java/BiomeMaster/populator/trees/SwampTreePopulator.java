@@ -14,7 +14,7 @@ public class SwampTreePopulator extends Populator {
     private final int type;
 
     public SwampTreePopulator() {
-        this(-1);
+        this(BlockSapling.OAK);
     }
 
     public SwampTreePopulator(int type) {
@@ -41,7 +41,7 @@ public class SwampTreePopulator extends Populator {
             if (y == -1) {
                 continue;
             }
-            new SwampTree(random.nextBoundedInt(2)).generate(level, random, v.setComponents(x, y, z));
+            new SwampTree().generate(level, random, v.setComponents(x, y, z));
         }
     }
 
