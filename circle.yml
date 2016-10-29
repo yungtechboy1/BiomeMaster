@@ -3,7 +3,7 @@ checkout:
     - git submodule sync
     - git submodule update --init
     - mvn install
-    - cp -R ./target/nukkit-1.0-SNAPSHOT.jar $CIRCLE_ARTIFACTS
+    - cp -R ./target/BiomeMaster-0.1dev.jar $CIRCLE_ARTIFACTS
 
 machine:
   java:
