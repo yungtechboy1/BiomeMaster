@@ -41,7 +41,7 @@ public class SwamplandBiome extends GrassyBiome {
 
     @Override
     public int getColor() { // When this temperature goes below -0.1, a lush green color is used, 0x4C763C, otherwise it is set to a sickly brown, 0x6A7039. In addition, the color of the water in swamplands is always multiplied by a greenish tinge, 0xE0FFAE.
-        return 0xE0FFAE;
+        return 0x6a7039;
     }
     
     public void initBiome() {
