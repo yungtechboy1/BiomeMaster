@@ -106,10 +106,10 @@ public class NormalGenerator extends Generator {
         return "normal";
     }
 
-    @Override
+    /*@Override
     public Map<String, Object> getSettings() {
         return new HashMap<>();
-    }
+    }*/
     
     private static generateKernel() {
 		self.GAUSSIAN_KERNEL = [];
