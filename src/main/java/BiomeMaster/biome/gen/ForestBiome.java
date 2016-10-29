@@ -32,7 +32,6 @@ public class ForestBiome extends GrassyBiome {
         
         this.temperature = 0.7f;
         this.rainfall = 0.8f;
-        }
     }
 
     @Override
