@@ -28,8 +28,8 @@ public class JungleBiome extends GrassyBiome {
         this.addPopulator(bigTrees);
         this.addPopulator(trees);
         this.setElevation(62, 63);
-        this.temperature = 1.2D;
-        this.rainfall = 0.9D;
+        this.temperature = 1.2f;
+        this.rainfall = 0.9f;
     }
 
     @Override
