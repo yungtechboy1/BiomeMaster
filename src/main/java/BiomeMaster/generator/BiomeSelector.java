@@ -44,9 +44,9 @@ public class BiomeSelector {
             if (temperature < 0.25) {
                 return NormalGenerator.TAIGA;
             } else if (temperature < 0.75) {
-                return Biome.FOREST;
+                return NormalGenerator.FOREST;
             } else {
-                return Biome.BIRCH_FOREST;
+                return NormalGenerator.BIRCH_FOREST;
             }
         } else {
             if (temperature < 0.5) {
