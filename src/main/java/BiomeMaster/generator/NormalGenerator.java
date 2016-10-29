@@ -181,9 +181,9 @@ public class NormalGenerator extends Generator {
                 new OreType(new BlockOreDiamond(), 1, 8, 0, 16),
                 new OreType(new BlockDirt(), 10, 33, 0, 128),
                 new OreType(new BlockGravel(), 8, 33, 0, 128),
-                new OreType(new BlockDiorite(), 10, 33, 0, 80),
-                new OreType(new BlockAndesite(), 10, 33, 0, 80),
-                new OreType(new BlockGranite(), 10, 33, 0, 80)
+                new OreType(new Stone(Stone.GRANITE), 10, 33, 0, 80),
+                new OreType(new Stone(Stone.GRANITE), 10, 33, 0, 80),
+                new OreType(new Stone(Stone.GRANITE), 10, 33, 0, 80)
         });
         this.populators.add(ores);
     }
