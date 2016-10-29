@@ -31,6 +31,12 @@ public class BiomeSelector {
                 return NormalGenerator.PLAINS;
             } else if (rainfall <= 0.9f) {
                 return NormalGenerator.SWAMP;
+            } else {
+                if (temperature <= 2.0f) {
+                    if (rainfall == 0.0f) {
+                        return NormalGenerator.DESERT;
+                    }
+                }
             }
         } else if (temperature <= 1.2f) {
             if (rainfall <= 0.9f) {
@@ -48,12 +54,6 @@ public class BiomeSelector {
             if (rainfall <= 0.6f) {
                 return NormalGenerator.BIRCH_FOREST;
             }
-        } else if (temperature <= 0.7f) {
-            if (rainfall <= 0.8f) {
-                return NormalGenerator.FOREST;
-            } else {
-                return NormalGenerator.ROOFED_FOREST;
-            }
         } else if (temperature <= 0.9f) {
             if (rainfall <= 1.0f) {
                 return NormalGenerator.MUSHROOM_ISLAND;
@@ -62,24 +62,15 @@ public class BiomeSelector {
             if (rainfall <= 0.5f) {
                 return NormalGenerator.ICE_PLAINS;
             }
-        } else if (temperature <= 2.0f) {
-            if (rainfall <= 0.0f) {
-                return NormalGenerator.DESERT;
+        } else if (temperature <= 0.7f) {
+            if (rainfall <= 0.8f) {
+                return NormalGenerator.FOREST;
+            } else {
+                return NormalGenerator.ROOFED_FOREST;
             }
         } else {
-            if (temperature <= 0.7f) {
-                if (rainfall <= 0.8f) {
-                    return NormalGenerator.ROOFED_FOREST_M;
-                }
-            } else {
-                if (temperature <= 0.5f) {
-                    if (rainfall <= 0.5f) {
-                        return NormalGenerator.RIVER;
-                    }
-                }
-            }
+            return NormalGenerator.ROOFED_FOREST_M;
         }
-    }
 
     public void recalculate() {
         this.map = new int[4096];
