@@ -1,4 +1,4 @@
-package BiomeMaster.populator;
+package BiomeMaster.populator.trees;
 
 import BiomeMaster.object.tree.JungleBigTree;
 import cn.nukkit.block.Block;
