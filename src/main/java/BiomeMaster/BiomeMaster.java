@@ -42,6 +42,8 @@ public class BiomeMaster extends PluginBase {
         new PlainBiome().initBiome();
         new RiverBiome().initBiome();
         new TaigaBiome().initBiome();
+        new ForestBiome().initBiome();
+        new BirchForestBiome().initBiome();
 
         Generator.addGenerator(NormalGenerator.class, "normal", Generator.TYPE_INFINITE);
     }
