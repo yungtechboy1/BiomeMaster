@@ -143,11 +143,11 @@ public class NormalGenerator extends Generator {
         this.selector.addBiome(Biome.getBiome(OCEAN));
         this.selector.addBiome(Biome.getBiome(PLAINS));
         this.selector.addBiome(Biome.getBiome(DESERT));
-        //this.selector.addBiome(Biome.getBiome(FOREST));
+        this.selector.addBiome(Biome.getBiome(FOREST));
         this.selector.addBiome(Biome.getBiome(TAIGA));
         this.selector.addBiome(Biome.getBiome(RIVER));
         this.selector.addBiome(Biome.getBiome(ICE_PLAINS));
-        //this.selector.addBiome(Biome.getBiome(BIRCH_FOREST));
+        this.selector.addBiome(Biome.getBiome(BIRCH_FOREST));
         
         this.selector.addBiome(Biome.getBiome(JUNGLE));
         this.selector.addBiome(Biome.getBiome(SAVANNA));
