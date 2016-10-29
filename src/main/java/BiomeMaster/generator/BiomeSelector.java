@@ -71,6 +71,7 @@ public class BiomeSelector {
         } else {
             return NormalGenerator.ROOFED_FOREST_M;
         }
+    }
 
     public void recalculate() {
         this.map = new int[4096];
