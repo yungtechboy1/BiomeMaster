@@ -3,11 +3,11 @@ package BiomeMaster.biome.gen;
 import BiomeMaster.generator.NormalGenerator;
 import BiomeMaster.populator.trees.DarkOakTreePopulator;
 import BiomeMaster.populator.mushroom.MushroomPopulator;
-import BiomeMaster.biome.MountainsBiome;
+import BiomeMaster.biome.GrassyBiome;
 import cn.nukkit.level.generator.populator.PopulatorFlower;
 import cn.nukkit.level.generator.populator.PopulatorGrass;
 
-public class RoofedForestMBiome extends MountainsBiome {
+public class RoofedForestMBiome extends GrassyBiome {
 
     public RoofedForestMBiome() {
         super();
