@@ -7,7 +7,7 @@ This plugin is in development and not have all features like Spigot or Bukkit.
 
 **TravisCI Build Status** [![TravisCI](https://travis-ci.org/NycuRO/BiomeMaster.svg?branch=master)](https://travis-ci.org/NycuRO/BiomeMaster "TravisCI Build Status")
 
-**CircleCI Build Status + DOWNLOAD** [![CircleCI](https://circleci.com/gh/NycuRO/BiomeMaster.svg?style=svg)](https://circleci.com/gh/NycuRO/BiomeMaster)
+**CircleCI Build Status + DOWNLOAD .jar** [![CircleCI](https://circleci.com/gh/NycuRO/BiomeMaster.svg?style=svg)](https://circleci.com/gh/NycuRO/BiomeMaster)
 
 ## Information
 
