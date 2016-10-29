@@ -71,7 +71,6 @@ public class BiomeSelector {
         } else {
             return NormalGenerator.ROOFED_FOREST_M;
         }
-    return true;
     }
 
     public void recalculate() {
