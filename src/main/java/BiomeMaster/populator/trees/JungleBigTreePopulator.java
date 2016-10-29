@@ -20,7 +20,7 @@ public class JungleBigTreePopulator extends Populator {
     private final int type;
 
     public JungleBigTreePopulator() {
-        this(BlockSapling.OAK);
+        this(BlockSapling.JUNGLE);
     }
 
     public JungleBigTreePopulator(int type) {
