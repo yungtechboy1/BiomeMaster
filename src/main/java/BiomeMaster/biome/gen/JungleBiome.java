@@ -1,9 +1,9 @@
 package BiomeMaster.biome.gen;
 
 import BiomeMaster.generator.NormalGenerator;
-import BiomeMaster.populator.JungleBigTreePopulator;
-import BiomeMaster.populator.JungleTreePopulator;
-import BiomeMaster.populator.PopulatorFern;
+import BiomeMaster.populator.trees.JungleBigTreePopulator;
+import BiomeMaster.populator.trees.JungleTreePopulator;
+import BiomeMaster.populator.biomes.PopulatorFern;
 import BiomeMaster.biome.GrassyBiome;
 import cn.nukkit.level.generator.populator.PopulatorGrass;
 
