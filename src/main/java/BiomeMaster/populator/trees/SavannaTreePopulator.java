@@ -18,7 +18,7 @@ public class SavannaTreePopulator extends Populator {
     private final int type;
 
     public SavannaTreePopulator() {
-        this(BlockSapling.OAK);
+        this(BlockSapling.ACACIA);
     }
 
     public SavannaTreePopulator(int type) {
