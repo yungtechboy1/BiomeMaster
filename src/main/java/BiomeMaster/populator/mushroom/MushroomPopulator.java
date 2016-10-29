@@ -1,4 +1,4 @@
-package BiomeMaster.populator;
+package BiomeMaster.populator.mushroom;
 
 import BiomeMaster.object.mushroom.BigMushroom;
 import cn.nukkit.block.Block;
