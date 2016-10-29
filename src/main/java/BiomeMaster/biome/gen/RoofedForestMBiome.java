@@ -3,11 +3,11 @@ package BiomeMaster.biome.gen;
 import BiomeMaster.generator.NormalGenerator;
 import BiomeMaster.populator.trees.DarkOakTreePopulator;
 import BiomeMaster.populator.mushroom.MushroomPopulator;
-import BiomeMaster.biome.GrassyBiome;
+import BiomeMaster.biome.MountainsBiome;
 import cn.nukkit.level.generator.populator.PopulatorFlower;
 import cn.nukkit.level.generator.populator.PopulatorGrass;
 
-public class RoofedForestMBiome extends GrassyBiome {
+public class RoofedForestMBiome extends MountainsBiome {
 
     public RoofedForestMBiome() {
         super();
@@ -30,8 +30,8 @@ public class RoofedForestMBiome extends GrassyBiome {
         this.addPopulator(mushroom);
 
         this.setElevation(63, 127);
-        this.temperature = 0.7;
-        this.rainfall = 0.8;
+        this.temperature = 0.7f;
+        this.rainfall = 0.8f;
     }
 
     @Override
