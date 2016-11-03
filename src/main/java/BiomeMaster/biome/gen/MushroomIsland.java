@@ -11,7 +11,6 @@ import BiomeMaster.biome.NormalBiome;
 public class MushroomIsland extends NormalBiome implements CaveBiome {
 
     public MushroomIsland() {
-        this.setGroundCover(new Block[]{new BlockMycelium(), new BlockDirt(), new BlockDirt(), new BlockDirt(), new BlockDirt()});
 
         MushroomPopulator mushroomPopulator = new MushroomPopulator();
         mushroomPopulator.setBaseAmount(1);
