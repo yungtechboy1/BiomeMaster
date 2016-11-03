@@ -45,6 +45,6 @@ public class BiomeMaster extends PluginBase {
         new ForestBiome().initBiome();
         new BirchForestBiome().initBiome();
 
-        Generator.addGenerator(NormalGenerator.class, "normal", Generator.TYPE_INFINITE);
+        Generator.addGenerator(NormalGenerator.class, "BiomeMaster", Generator.TYPE_INFINITE);
     }
 }
