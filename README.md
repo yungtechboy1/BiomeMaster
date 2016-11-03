@@ -17,6 +17,12 @@ Photos with world: http://imgur.com/a/PVqoH
 - BiomeMaster is one plugin for Nukkit with improved Generator and a lot more features
 - You can download .jar from Circle CI. Tab to latest build,tap to artifacts selection and download .jar
 
+I'm planned to change name "NORMAL" for fix conflicts with nukkit generator and BiomeMaster generator.
+
+If == normal, biomes and generation and temperature is cuplate and get fuck world. If you want BiomeMaster generation ,use:
+
+level-type=BiomeMaster **IN SERVER.PROPRIETES**
+
 ## Thanks
 
 Thanks to all for help me. If you want to help me ,create PR's or tell me :)
