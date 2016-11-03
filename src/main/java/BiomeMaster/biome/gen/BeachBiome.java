@@ -30,7 +30,7 @@ public class BeachBiome extends SandyBiome {
         return "Beach";
     }
     
-        @Override
+    @Override
     public int getSurfaceBlock() {
         return Block.SAND;
     }
