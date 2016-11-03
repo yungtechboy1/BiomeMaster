@@ -57,8 +57,6 @@ public class BiomeSelector {
                 return NormalGenerator.ROOFED_FOREST;
             } else if (temperature < 1.3) {
                 return NormalGenerator.JUNGLE;
-            } else if (temperature < 0.9) {
-                return NormalGenerator.MUSHROOM_ISLAND;
             } else {
                 return Biome.SMALL_MOUNTAINS;
             }
