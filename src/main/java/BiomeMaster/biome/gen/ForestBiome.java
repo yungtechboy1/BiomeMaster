@@ -28,7 +28,7 @@ public class ForestBiome extends GrassyBiome {
 
         this.addPopulator(tallGrass);
         
-        this.setElevation(63, 81);
+        this.setElevation(63, 68);
         
         this.temperature = 0.7f;
         this.rainfall = 0.8f;

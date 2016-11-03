@@ -10,7 +10,7 @@ import BiomeMaster.generator.NormalGenerator;
 public class DesertBiome extends SandyBiome {
     public DesertBiome() {
         super();
-        this.setElevation(63, 74);
+        this.setElevation(63, 69);
         this.temperature = 2.0f;
         this.rainfall = 0.0f;
     }
