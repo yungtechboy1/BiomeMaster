@@ -32,12 +32,12 @@ public class BeachBiome extends SandyBiome {
     
         @Override
     public int getSurfaceBlock() {
-        return Block.DESERT;
+        return Block.SAND;
     }
 
     @Override
     public int getGroundBlock() {
-        return Block.SAND_STONE;
+        return Block.SAND;
     }
     
     @Override
