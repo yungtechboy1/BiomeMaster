@@ -18,6 +18,10 @@ public class ForestBiome extends GrassyBiome {
         PopulatorTree trees = new PopulatorTree(BlockSapling.OAK);
         trees.setBaseAmount(5);
         this.addPopulator(trees);
+        
+        PopulatorTree tree = new PopulatorTree(BlockSapling.BIRCH);
+        tree.setBaseAmount(3);
+        this.addPopulator(tree);
 
         PopulatorGrass grass = new PopulatorGrass();
         grass.setBaseAmount(30);
