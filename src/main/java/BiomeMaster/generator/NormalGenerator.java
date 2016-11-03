@@ -67,7 +67,7 @@ public class NormalGenerator extends Generator {
 
     private int heightOffset;
 
-    private final int seaHeight = 64;
+    private final int seaHeight = 63; // from http://minecraft.gamepedia.com/Customized
     private final int seaFloorHeight = 48;
     private final int beathStartHeight = 60;
     private final int beathStopHeight = 64;
