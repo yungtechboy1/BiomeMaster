@@ -98,7 +98,7 @@ public class NormalGenerator extends Generator {
 
     @Override
     public String getName() {
-        return "normal";
+        return "BiomeMaster";
     }
 
     @Override
