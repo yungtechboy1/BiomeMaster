@@ -23,24 +23,21 @@ public class BeachBiome extends SandyBiome {
         tallGrass.setBaseAmount(3);
 
         this.addPopulator(tallGrass);
-
-        this.setGroundCover(new Block[]{
-                new BlockSand(),
-                new BlockSand(),
-                new BlockSand(),
-                new BlockSand(),
-                new BlockSandstone(),
-                new BlockSandstone(),
-                new BlockSandstone(),
-                new BlockSandstone(),
-                new BlockSandstone(),
-                new BlockSandstone()
-        });
     }
 
     @Override
     public String getName() {
         return "Beach";
+    }
+    
+        @Override
+    public int getSurfaceBlock() {
+        return Block.DESERT;
+    }
+
+    @Override
+    public int getGroundBlock() {
+        return Block.SAND_STONE;
     }
     
     @Override
