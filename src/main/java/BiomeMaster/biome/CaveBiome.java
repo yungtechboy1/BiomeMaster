@@ -4,7 +4,7 @@ package BiomeMaster.biome;
  * Nukkit Project
  * Author: MagicDroidX
  */
-public interface CaveBiome {
+public class CaveBiome {
     int getStoneBlock();
 
     int getSurfaceBlock();
