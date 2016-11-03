@@ -1,8 +1,5 @@
 package BiomeMaster.biome.gen;
 
-import cn.nukkit.block.Block;
-import cn.nukkit.block.BlockSand;
-import cn.nukkit.block.BlockSandstone;
 import cn.nukkit.level.generator.populator.PopulatorTallGrass;
 import BiomeMaster.biome.SandyBiome;
 import BiomeMaster.generator.NormalGenerator;
@@ -28,16 +25,6 @@ public class BeachBiome extends SandyBiome {
     @Override
     public String getName() {
         return "Beach";
-    }
-    
-    @Override
-    public int getSurfaceBlock() {
-        return Block.SAND;
-    }
-
-    @Override
-    public int getGroundBlock() {
-        return Block.SAND;
     }
     
     @Override
