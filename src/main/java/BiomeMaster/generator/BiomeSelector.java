@@ -26,52 +26,41 @@ public class BiomeSelector {
     }
 
     public int lookup(double temperature, double rainfall) {
-        if (temperature < 0.8f) {
-            if (rainfall < 0.4f) {
-                return NormalGenerator.PLAINS;
-            } else if (rainfall < 0.9f) {
+        if (rainfall < 0.25) {
+            if (temperature < 0.9) {
                 return NormalGenerator.SWAMP;
             } else {
-                if (temperature < 2.0f) {
-                    if (rainfall == 0.0f) {
-                        return NormalGenerator.DESERT;
-                    }
-                }
+                return NormalGenerator.SAVANNA;
             }
-        } else if (temperature < 1.2f) {
-            if (rainfall < 0.9f) {
-                return NormalGenerator.JUNGLE;
-            } else {
-                if (rainfall == 0.0f) {
-                    return NormalGenerator.SAVANNA;
-                }
-            }
-        } else if (temperature < 0.05f) {
-            if (rainfall < 0.8f) {
-                return NormalGenerator.TAIGA;
-            }
-        } else if (temperature < 0.6f) {
-            if (rainfall < 0.6f) {
-                return NormalGenerator.BIRCH_FOREST;
-            }
-        } else if (temperature < 0.9f) {
-            if (rainfall < 1.0f) {
-                return NormalGenerator.MUSHROOM_ISLAND;
-            }
-        } else if (temperature == 0.0f) {
-            if (rainfall < 0.5f) {
+        } else if (rainfall < 0.60) {
+            if (temperature < 0.25) {
                 return NormalGenerator.ICE_PLAINS;
+            } else if (temperature < 0.75) {
+                return NormalGenerator.PLAINS;
+            } else {
+                return NormalGenerator.DESERT;
             }
-        } else if (temperature < 0.7f) {
-            if (rainfall < 0.8f) {
+        } else if (rainfall < 0.80) {
+            if (temperature < 0.25) {
+                return NormalGenerator.TAIGA;
+            } else if (temperature < 0.75) {
                 return NormalGenerator.FOREST;
             } else {
-                return NormalGenerator.ROOFED_FOREST;
+                return NormalGenerator.BIRCH_FOREST;
             }
         } else {
-            return NormalGenerator.ROOFED_FOREST_M;
+            if (temperature < 0.25) {
+                return Biome.MOUNTAINS;
+            } else if (temperature < 0.5) {
+                return NormalGenerator.ROOFED_FOREST_M;
+            } else if (temperature < 0.8) {
+                return NormalGenerator.ROOFED_FOREST;
+            } else if (temperature < 1.3) {
+                return NormalGenerator.JUNGLE;
+            } else {
+                return Biome.SMALL_MOUNTAINS;
+            }
         }
-    return NormalGenerator.OCEAN;
     }
     
     public void recalculate() {
