@@ -40,6 +40,10 @@ public class BiomeSelector {
             } else {
                 return NormalGenerator.DESERT;
             }
+        } else if (temperature < 0.9) {
+            if (rainfall < 1.0) {
+                return NormalGenerator.MUSHROOM_ISLAND;
+            }
         } else if (rainfall < 0.80) {
             if (temperature < 0.25) {
                 return NormalGenerator.TAIGA;
