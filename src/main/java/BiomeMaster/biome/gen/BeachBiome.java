@@ -28,6 +28,21 @@ public class BeachBiome extends SandyBiome {
     }
     
     @Override
+    public int getSurfaceBlock() {
+        return Block.SAND;
+    }
+
+    @Override
+    public int getGroundBlock() {
+        return Block.SAND;
+    }
+
+    @Override
+    public int getStoneBlock() {
+        return Block.STONE;
+    }
+    
+    @Override
     public int getColor() {
         return 0xfade85;
     }
