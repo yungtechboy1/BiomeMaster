@@ -32,6 +32,21 @@ public class DesertBiome extends SandyBiome {
     public String getName() {
         return "Desert";
     }
+    
+    @Override
+    public int getSurfaceBlock() {
+        return Block.SAND;
+    }
+
+    @Override
+    public int getGroundBlock() {
+        return Block.SAND;
+    }
+
+    @Override
+    public int getStoneBlock() {
+        return Block.SANDSTONE;
+    }
 
     public void initBiome() {
         register(NormalGenerator.DESERT, this);
