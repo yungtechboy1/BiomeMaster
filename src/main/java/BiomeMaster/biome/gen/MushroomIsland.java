@@ -20,6 +20,14 @@ public class MushroomIsland extends NormalBiome implements CaveBiome {
         setElevation(60, 70);
         temperature = 0.9f;
         rainfall = 1.0f;
+        
+        this.setGroundCover(new Block[]{
+        new BlockMycelium(),
+        new BlockDirt(),
+        new BlockDirt(),
+        new BlockDirt(),
+        new BlockDirt()
+        });
     }
 
     @Override
