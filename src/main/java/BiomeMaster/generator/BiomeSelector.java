@@ -28,6 +28,9 @@ public class BiomeSelector {
     public int lookup(double temperature, double rainfall)
     {
         if (temperature <= 0.8f)
+            if (rainfall <= 0.4f)
+                return NormalGenerator.PLAINS;
+        else if (temperature <= 0.8f)
             if (rainfall <= 0.9f)
                 return NormalGenerator.SWAMP;
         else if (rainfall <= 0.8f)
@@ -59,7 +62,7 @@ public class BiomeSelector {
                 return NormalGenerator.ROOFED_FOREST;
             else
                 return NormalGenerator.ROOFED_FOREST_M;
-        return NormalGenerator.PLAINS;
+        return NormalGenerator.OCEAN;
     }
     
     public void recalculate() {
