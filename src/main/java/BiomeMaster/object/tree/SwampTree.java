@@ -42,8 +42,8 @@ public class SwampTree extends TreeGenerator {
                     for (int i1 = position.getZ() - k; i1 <= position.getZ() + k && flag; ++i1) {
                         if (j >= 0 && j < 256) {
                             pos2.setComponents(l, j, i1);
-                            block = worldIn.getBlockIdAt(pos2.x, pos2.y, pos2.z);
-                            if (pos2 != Block.AIR && pos2 != Block.LEAVES) {
+                            int block = worldIn.getBlockIdAt(pos2.x, pos2.y, pos2.z);
+                            if (block != Block.AIR && block != Block.LEAVES) {
                                 if (block != Block.WATER && block != Block.STILL_WATER) {
                                     flag = false;
                                 } else if (j > position.getY()) {
