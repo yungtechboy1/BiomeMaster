@@ -18,9 +18,9 @@ public class SwampTree extends TreeGenerator {
         BlockVector3 position = new BlockVector3(vectorPosition.getFloorX(), vectorPosition.getFloorY(), vectorPosition.getFloorZ());
         
         int i;
-        for (i = rand.nextInt(4) + 5; worldIn.getBlockIdAt(position.down()).getBlock() == Block.WATER; position = position.down()) {
+        /*for (i = rand.nextInt(4) + 5; worldIn.getBlockIdAt(position.down()).getBlock() == Block.WATER; position = position.down()) {
             ;
-        }
+        }*/
         
         boolean flag = true;
 
@@ -42,9 +42,9 @@ public class SwampTree extends TreeGenerator {
                     for (int i1 = position.getZ() - k; i1 <= position.getZ() + k && flag; ++i1) {
                         if (j >= 0 && j < 256) {
                             pos2.setComponents(l, j, i1);
-                            BlockVector3 blockstate = new BlockVector3(l, j, i1);
-                            int block = worldIn.getBlockIdAt(blockstate.x, blockstate.y, blockstate.z);
-                            if (blockstate != Block.AIR && blockstate != Block.LEAVES) {
+                            BlockVector3 iblockstate = new BlockVector3(l, j, i1);
+                            int block = worldIn.getBlockIdAt(iblockstate.x, iblockstate.y, iblockstate.z);
+                            if (iblockstate != Block.AIR && iblockstate != Block.LEAVES) {
                                 if (block != Block.WATER && block != Block.STILL_WATER) {
                                     flag = false;
                                 } else if (j > position.getY()) {
