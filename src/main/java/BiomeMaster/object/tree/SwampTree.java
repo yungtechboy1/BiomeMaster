@@ -77,7 +77,7 @@ public class SwampTree extends TreeGenerator {
                                     BlockVector3 blockpos = new BlockVector3(j3, k1, i4);
                                     int id = worldIn.getBlockIdAt(blockpos.x, blockpos.y, blockpos.z);
 
-                                    if (id == Block.AIR || id == Block.LEAVES || id == Block.VINE) {
+                                    if (!(id == Block.AIR || id == Block.LEAVES || id == Block.VINE)) {
                                         this.setBlockAndNotifyAdequately(worldIn, blockpos, this.metaLeaves);
                                     }
                                 }
