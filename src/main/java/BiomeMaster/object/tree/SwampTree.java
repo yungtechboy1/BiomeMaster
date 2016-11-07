@@ -44,13 +44,16 @@ public class SwampTree extends TreeGenerator {
                             if (id != Block.AIR && id != Block.LEAVES) {
                                 if (id != Block.WATER && id != Block.STILL_WATER) {
                                     flag = false;
+                                } else if (j > position.getY()) {
+                                    flag = false;
                                 }
-                            } else {
-                                flag = false;
                             }
+                        } else {
+                            flag = false;
                         }
                     }
                 }
+            }
 
             if (!flag) {
                 return false;
