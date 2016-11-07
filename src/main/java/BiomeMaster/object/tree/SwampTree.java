@@ -41,8 +41,10 @@ public class SwampTree extends TreeGenerator {
                     for (int i1 = position.getZ() - k; i1 <= position.getZ() + k && flag; ++i1) {
                         if (j >= 0 && j < 256) {
                             pos2.setComponents(l, j, i1);
-                            if (id != Block.AIR && id != Block.LEAVES) {
-                                if (id != Block.WATER && id != Block.STILL_WATER) {
+                            BlockVector3 blockstate = new BlockVector3(l, j, i1);
+                            int block = worldIn.getBlockIdAt(blockstate.x, blockstate.y, blockstate.z);
+                            if (blockstate != Block.AIR && blockstate != Block.LEAVES) {
+                                if (block != Block.WATER && block != Block.STILL_WATER) {
                                     flag = false;
                                 } else if (j > position.getY()) {
                                     flag = false;
@@ -59,9 +61,9 @@ public class SwampTree extends TreeGenerator {
                 return false;
             } else {
                 BlockVector3 down = position.getSide(Vector3.SIDE_DOWN);
-                int block = worldIn.getBlockIdAt(down.x, down.y, down.z);
+                int block1 = worldIn.getBlockIdAt(down.x, down.y, down.z);
 
-                if ((block == Block.GRASS || block == Block.DIRT) && position.getY() < 256 - i - 1) {
+                if ((block1 == Block.GRASS || block1 == Block.DIRT) && position.getY() < 256 - i - 1) {
                     this.setDirtAt(worldIn, down);
 
                     for (int k1 = position.getY() - 3 + i; k1 <= position.getY() + i; ++k1) {
@@ -77,7 +79,6 @@ public class SwampTree extends TreeGenerator {
                                 if (Math.abs(k3) != l2 || Math.abs(j1) != l2 || rand.nextBoundedInt(2) != 0 && j2 != 0) {
                                     BlockVector3 blockpos = new BlockVector3(j3, k1, i4);
                                     int id = worldIn.getBlockIdAt(blockpos.x, blockpos.y, blockpos.z);
-
                                     if (!(id == Block.AIR || id == Block.LEAVES || id == Block.VINE)) {
                                         this.setBlockAndNotifyAdequately(worldIn, blockpos, LEAF);
                                     }
