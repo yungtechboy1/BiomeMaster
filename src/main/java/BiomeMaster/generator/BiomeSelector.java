@@ -17,7 +17,7 @@ public class BiomeSelector {
 
     private final Map<Integer, Biome> biomes = new HashMap<>();
 
-    private int[] map = new int[256];
+    private int[] map = new int[64 * 64];
 
     public BiomeSelector(NukkitRandom random, Biome fallback) {
         this.fallback = fallback;
@@ -63,7 +63,7 @@ public class BiomeSelector {
     }
     
     public void recalculate() {
-        this.map = new int[256];
+        this.map = new int[64 * 64];
         for(int i = 0; i < 128; ++i) {
             for(int j = 0; j < 128; ++j) {
                 this.map[i + (j << 6)] = this.lookup(i / 128.0D, j / 128.0D);
