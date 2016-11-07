@@ -2,9 +2,7 @@ package BiomeMaster.generator;
 
 import cn.nukkit.block.*;
 import cn.nukkit.level.ChunkManager;
-import cn.nukkit.level.format.anvil.*;
-import cn.nukkit.level.format.*;
-import cn.nukkit.level.format.generic.*;
+import cn.nukkit.level.format.FullChunk;
 import cn.nukkit.level.generator.Generator;
 import cn.nukkit.level.generator.biome.Biome;
 import cn.nukkit.level.generator.noise.Simplex;
@@ -69,7 +67,7 @@ public class NormalGenerator extends Generator {
 
     private int heightOffset;
 
-    private final int seaHeight = 63; // from http://minecraft.gamepedia.com/Customized
+    private final int seaHeight = 64;
     private final int seaFloorHeight = 48;
     private final int beathStartHeight = 60;
     private final int beathStopHeight = 64;
@@ -139,7 +137,7 @@ public class NormalGenerator extends Generator {
         this.noiseBaseGround = new Simplex(this.nukkitRandom, 4F, 1F / 4F, 1F / 64F);
         this.noiseRiver = new Simplex(this.nukkitRandom, 2F, 1F, 1F / 512F);
         this.nukkitRandom.setSeed(this.level.getSeed());
-        this.selector = new BiomeSelector(this.nukkitRandom, Biome.getBiome(Biome.PLAINS));
+        this.selector = new BiomeSelector(this.nukkitRandom, Biome.getBiome(Biome.OCEAN));
         this.heightOffset = random.nextRange(-5, 3);
 
         this.selector.addBiome(Biome.getBiome(OCEAN));
