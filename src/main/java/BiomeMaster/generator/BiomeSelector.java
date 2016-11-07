@@ -30,9 +30,9 @@ public class BiomeSelector {
         if (temperature <= 0.8f)
             if (rainfall <= 0.4f)
                 return NormalGenerator.PLAINS;
-        else if (temperature <= 0.8f)
-            if (rainfall <= 0.9f)
-                return NormalGenerator.SWAMP;
+            else
+                if (rainfall <= 0.9f)
+                    return NormalGenerator.SWAMP;
         else if (rainfall <= 0.8f)
             if (temperature <= 0.05f)
                 return NormalGenerator.TAIGA;
