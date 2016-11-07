@@ -17,7 +17,7 @@ public class BiomeSelector {
 
     private final Map<Integer, Biome> biomes = new HashMap<>();
 
-    private int[] map = new int[64 * 64];
+    private int[] map = new int[256];
 
     public BiomeSelector(NukkitRandom random, Biome fallback) {
         this.fallback = fallback;
@@ -25,60 +25,48 @@ public class BiomeSelector {
         this.rainfall = new Simplex(random, 2F, 1F / 8F, 1F / 1024F);
     }
 
-    public int lookup(double temperature, double rainfall) {
-        if (temperature <= 0.8f) {
-            if (rainfall <= 0.4f) {
-                return NormalGenerator.PLAINS;
-            } else if (rainfall <= 0.9f) {
+    public int lookup(double temperature, double rainfall)
+    {
+        if (rainfall <= 0.9f)
+            if (temperature <= 0.8f)
                 return NormalGenerator.SWAMP;
-            } else {
-                if (temperature <= 2.0f) {
-                    if (rainfall == 0.0f) {
-                        return NormalGenerator.DESERT;
-                    }
-                }
-            }
-        } else if (temperature <= 1.2f) {
-            if (rainfall <= 0.9f) {
-                return NormalGenerator.JUNGLE;
-            } else {
-                if (rainfall == 0.0f) {
-                    return NormalGenerator.SAVANNA;
-                }
-            }
-        } else if (temperature <= 0.05f) {
-            if (rainfall <= 0.8f) {
+        else if (rainfall <= 0.8f)
+            if (temperature <= 0.05f)
                 return NormalGenerator.TAIGA;
-            }
-        } else if (temperature <= 0.6f) {
-            if (rainfall <= 0.6f) {
+            else
+                if (temperature <= 0.7f)
+                    return NormalGenerator.FOREST;
+        else if (rainfall <= 0.6f)
+            if (temperature <= 0.6f)
                 return NormalGenerator.BIRCH_FOREST;
-            }
-        } else if (temperature <= 0.9f) {
-            if (rainfall <= 1.0f) {
+        else if (rainfall <= 1.0f)
+            if (temperature <= 0.9f)
                 return NormalGenerator.MUSHROOM_ISLAND;
-            }
-        } else if (temperature == 0.0f) {
-            if (rainfall <= 0.5f) {
+        else if (rainfall <= 0.5f)
+            if (temperature == 0.0f)
                 return NormalGenerator.ICE_PLAINS;
-            }
-        } else if (temperature <= 0.7f) {
-            if (rainfall <= 0.8f) {
-                return NormalGenerator.FOREST;
-            } else {
+        else if (rainfall == 0.0f)
+            if (temperature <= 2.0f)
+                return NormalGenerator.DESERT;
+        else if (temperature <= 1.2f)
+            if (rainfall <= 0.9f)
+                return NormalGenerator.JUNGLE;
+            else
+                if (rainfall == 0.0f)
+                    return NormalGenerator.SAVANNA;
+        else if (temperature <= 0.7f)
+            if (rainfall <= 0.8)
                 return NormalGenerator.ROOFED_FOREST;
-            }
-        } else {
-            return NormalGenerator.ROOFED_FOREST_M;
-        }
-    return NormalGenerator.OCEAN;
+            else
+                return NormalGenerator.ROOFED_FOREST_M;
+        return NormalGenerator.PLAINS;
     }
     
     public void recalculate() {
-        this.map = new int[64 * 64];
-        for(int i = 0; i < 64; ++i) {
-            for(int j = 0; j < 64; ++j) {
-                this.map[i + (j << 6)] = this.lookup(i / 63d, j / 63d);
+        this.map = new int[256];
+        for(int i = 0; i < 128; ++i) {
+            for(int j = 0; j < 128; ++j) {
+                this.map[i + (j << 6)] = this.lookup(i / 128.0D, j / 128.0D);
             }
         }
     }
@@ -96,8 +84,8 @@ public class BiomeSelector {
     }
 
     public Biome pickBiome(double x, double z) {
-        int temperature = (int) (this.getTemperature(x, z) * 63);
-        int rainfall = (int) (this.getRainfall(x, z) * 63);
+        int temperature = (int) (this.getTemperature(x, z) * 128);
+        int rainfall = (int) (this.getRainfall(x, z) * 128);
         
         //System.out.println("temperature: "+temperature+"     rainfall: "+rainfall);
 
