@@ -9,21 +9,18 @@ import cn.nukkit.math.Vector3;
 
 public class SwampTree extends TreeGenerator {
     
-    /**
-     * The metadata value of the wood to use in tree generation.
-     */
-    private final Block metaWood = new BlockWood(BlockWood.OAK);
-
-    /**
-     * The metadata value of the leaves to use in tree generation.
-     */
-    private final Block metaLeaves = new BlockLeaves(BlockLeaves.OAK);
+    private static final Block TRUNK = new BlockWood(BlockWood.OAK);
+    private static final Block LEAF = new BlockLeaves(BlockLeaves.OAK);
 
     @Override
     public boolean generate(ChunkManager worldIn, NukkitRandom rand, Vector3 vectorPosition) {
+        
         BlockVector3 position = new BlockVector3(vectorPosition.getFloorX(), vectorPosition.getFloorY(), vectorPosition.getFloorZ());
-
-        int i = rand.nextBoundedInt(4) + 5;
+        Vector3 down = position.getSide(Vector3.SIDE_DOWN);
+        for (int i = rand.nextInt(4) + 5; worldIn.getBlockIdAt(position.down()).getBlock() == WATER; position = position.down()) {
+            ;
+        }
+        
         boolean flag = true;
 
         if (position.getY() >= 1 && position.getY() + i + 1 <= 256) {
@@ -44,15 +41,16 @@ public class SwampTree extends TreeGenerator {
                     for (int i1 = position.getZ() - k; i1 <= position.getZ() + k && flag; ++i1) {
                         if (j >= 0 && j < 256) {
                             pos2.setComponents(l, j, i1);
-                            if (!this.canGrowInto(worldIn.getBlockIdAt(pos2.x, pos2.y, pos2.z))) {
+                            if (id != Block.AIR && id != Block.LEAVES) {
+                                if (id != Block.WATER && id != Block.STILL_WATER) {
+                                    flag = false;
+                                }
+                            } else {
                                 flag = false;
                             }
-                        } else {
-                            flag = false;
                         }
                     }
                 }
-            }
 
             if (!flag) {
                 return false;
@@ -78,7 +76,7 @@ public class SwampTree extends TreeGenerator {
                                     int id = worldIn.getBlockIdAt(blockpos.x, blockpos.y, blockpos.z);
 
                                     if (!(id == Block.AIR || id == Block.LEAVES || id == Block.VINE)) {
-                                        this.setBlockAndNotifyAdequately(worldIn, blockpos, this.metaLeaves);
+                                        this.setBlockAndNotifyAdequately(worldIn, blockpos, LEAF);
                                     }
                                 }
                             }
@@ -90,7 +88,7 @@ public class SwampTree extends TreeGenerator {
                         int id = worldIn.getBlockIdAt(up.x, up.y, up.z);
 
                         if (id == Block.AIR || id == Block.LEAVES || id == Block.WATER || id == Block.STILL_WATER) {
-                            this.setBlockAndNotifyAdequately(worldIn, up, this.metaWood);
+                            this.setBlockAndNotifyAdequately(worldIn, up, this.TRUNK);
                         }
                     }
 
