@@ -1,13 +1,7 @@
 package BiomeMaster.generator;
 
 import cn.nukkit.block.*;
-import cn.nukkit.level.ChunkManager;
-import cn.nukkit.level.format.FullChunk;
-import cn.nukkit.level.generator.Generator;
-import cn.nukkit.level.generator.biome.Biome;
-import cn.nukkit.level.generator.noise.Simplex;
-import cn.nukkit.level.generator.object.ore.OreType;
-import cn.nukkit.level.generator.populator.*;
+import cn.nukkit.level.*;
 import cn.nukkit.math.NukkitRandom;
 import cn.nukkit.math.Vector3;
 
