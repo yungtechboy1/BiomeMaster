@@ -64,9 +64,9 @@ public class BiomeSelector {
     
     public void recalculate() {
         this.map = new int[64 * 64];
-        for(int i = 0; i < 128; ++i) {
-            for(int j = 0; j < 128; ++j) {
-                this.map[i + (j << 6)] = this.lookup(i / 128.0D, j / 128.0D);
+        for(int i = 0; i < 64; ++i) {
+            for(int j = 0; j < 64; ++j) {
+                this.map[i + (j << 6)] = this.lookup(i / 63.0d, j / 63.0d);
             }
         }
     }
@@ -84,8 +84,8 @@ public class BiomeSelector {
     }
 
     public Biome pickBiome(double x, double z) {
-        int temperature = (int) (this.getTemperature(x, z) * 128);
-        int rainfall = (int) (this.getRainfall(x, z) * 128);
+        int temperature = (int) (this.getTemperature(x, z) * 63);
+        int rainfall = (int) (this.getRainfall(x, z) * 63);
         
         //System.out.println("temperature: "+temperature+"     rainfall: "+rainfall);
 
