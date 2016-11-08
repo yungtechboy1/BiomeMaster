@@ -18,7 +18,7 @@ public class SwampTree extends TreeGenerator {
         Vector3 down = position.getSide(Vector3.SIDE_DOWN);
         
         int i;
-        for (i = rand.nextBoundedInt(4) + 5; worldIn.getBlockIdAt(down.getFloorX(), down.getFloorY(), down.getFloorZ() == Block.WATER; position = down) {
+        for (i = rand.nextBoundedInt(4) + 5; worldIn.getBlockIdAt(down.getFloorX(), down.getFloorY(), down.getFloorZ()) == Block.WATER; position = down) {
             
         }
         
