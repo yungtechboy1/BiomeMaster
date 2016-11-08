@@ -236,13 +236,13 @@ public class NormalGenerator extends Generator {
                     if (genyHeight < beathStartHeight - 5) {
                         genyHeight += (int) (seaFloorGenerateRange * seaFloorNoise[genx][genz]);
                     }
-                    biome = Biome.getBiome(Biome.OCEAN);
+                    biome = Biome.getBiome(NormalGenerator.OCEAN);
                     if (genyHeight < seaFloorHeight - seaFloorGenerateRange) {
                         genyHeight = seaFloorHeight;
                     }
                     canRiver = false;
                 } else if (genyHeight <= beathStopHeight && genyHeight >= beathStartHeight) {
-                    biome = Biome.getBiome(Biome.BEACH);
+                    biome = Biome.getBiome(NormalGenerator.BEACH);
                 } else {
                     biome = this.pickBiome(chunkX * 16 + genx, chunkZ * 16 + genz);
                     if (canBaseGround) {
@@ -271,7 +271,7 @@ public class NormalGenerator extends Generator {
                         riverGenerate = riverGenerate > 0 ? riverGenerate : 0;
                         genyHeight -= riverGenerate * 64;
                         if (genyHeight < seaHeight) {
-                            biome = Biome.getBiome(Biome.RIVER);
+                            biome = Biome.getBiome(NormalGenerator.RIVER);
                             //to generate river floor
                             if (genyHeight <= seaHeight - 8) {
                                 int genyHeight1 = seaHeight - 9 + (int) (basegroundHeight * (baseNoise[genx][genz] + 1F));
@@ -292,7 +292,7 @@ public class NormalGenerator extends Generator {
                     if (geny <= bedrockDepth && (geny == 0 || nukkitRandom.nextRange(1, 5) == 1)) {
                         chunk.setBlock(genx, geny, genz, Block.BEDROCK);
                     } else if (geny > genyHeight) {
-                        if ((biome.getId() == Biome.ICE_PLAINS || biome.getId() == Biome.TAIGA) && geny == seaHeight) {
+                        if ((biome.getId() == NormalGenerator.ICE_PLAINS/*|| biome.getId() == NormalGenerator.FROZEN_RIVER*/) && geny == seaHeight) {
                             chunk.setBlock(genx, geny, genz, Block.ICE);
                         } else {
                             chunk.setBlock(genx, geny, genz, Block.STILL_WATER);
