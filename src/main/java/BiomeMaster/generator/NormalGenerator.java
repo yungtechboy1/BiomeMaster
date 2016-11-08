@@ -137,7 +137,7 @@ public class NormalGenerator extends Generator {
         this.noiseBaseGround = new Simplex(this.nukkitRandom, 4F, 1F / 4F, 1F / 64F);
         this.noiseRiver = new Simplex(this.nukkitRandom, 2F, 1F, 1F / 512F);
         this.nukkitRandom.setSeed(this.level.getSeed());
-        this.selector = new BiomeSelector(this.nukkitRandom, Biome.getBiome(Biome.OCEAN));
+        this.selector = new BiomeSelector(this.nukkitRandom, Biome.getBiome(NormalGenerator.OCEAN));
         this.heightOffset = random.nextRange(-5, 3);
 
         this.selector.addBiome(Biome.getBiome(OCEAN));
