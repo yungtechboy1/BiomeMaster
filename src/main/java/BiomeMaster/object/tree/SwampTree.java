@@ -15,10 +15,10 @@ public class SwampTree extends TreeGenerator {
     @Override
     public boolean generate(ChunkManager worldIn, NukkitRandom rand, Vector3 vectorPosition) {
         
-        BlockVector3 position = new BlockVector3(vectorPosition.getFloorX(), vectorPosition.getFloorY(), vectorPosition.getFloorZ());
+        Vector3 down = position.getSide(Vector3.SIDE_DOWN);
         
         int i;
-        for (i = rand.nextBoundedInt(4) + 5; worldIn.getBlockIdAt() == Block.WATER; position = position.getSide(Vector3.SIDE_DOWN)) {
+        for (i = rand.nextBoundedInt(4) + 5; worldIn.getBlockIdAt(down.getFloorX(), down.getFloorY(), down.getFloorZ() == Block.WATER; position = down) {
             
         }
         
