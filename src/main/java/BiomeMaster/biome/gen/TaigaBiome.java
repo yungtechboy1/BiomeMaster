@@ -48,16 +48,6 @@ public class TaigaBiome extends SnowyBiome {
         return "Taiga";
     }
     
-    @Override
-    public int getSurfaceBlock() {
-        return Block.GRASS;
-    }
-
-    @Override
-    public int getGroundBlock() {
-        return Block.DIRT;
-    }
-    
     public void initBiome() {
         register(NormalGenerator.TAIGA, this);
     }
