@@ -1,6 +1,6 @@
 package BiomeMaster.biome.gen;
 
-import cn.nukkit.block.BlockSapling;
+import cn.nukkit.block.*;
 import cn.nukkit.level.generator.populator.PopulatorGrass;
 import cn.nukkit.level.generator.populator.PopulatorTallGrass;
 import cn.nukkit.level.generator.populator.PopulatorTree;
@@ -21,7 +21,7 @@ public class TaigaBiome extends SnowyBiome {
         this.addPopulator(grass);
 
         PopulatorTree trees = new PopulatorTree(BlockSapling.SPRUCE);
-        trees.setBaseAmount(10);
+        trees.setBaseAmount(5);
         this.addPopulator(trees);
 
         PopulatorTallGrass tallGrass = new PopulatorTallGrass();
@@ -33,11 +33,29 @@ public class TaigaBiome extends SnowyBiome {
 
         this.temperature = 0.05f;
         this.rainfall = 0.8f;
+        
+        this.setGroundCover(new Block[]{
+                new BlockGrass(),
+                new BlockDirt(),
+                new BlockDirt(),
+                new BlockDirt(),
+                new BlockDirt()
+        });
     }
 
     @Override
     public String getName() {
         return "Taiga";
+    }
+    
+    @Override
+    public int getSurfaceBlock() {
+        return Block.GRASS;
+    }
+
+    @Override
+    public int getGroundBlock() {
+        return Block.DIRT;
     }
     
     public void initBiome() {
