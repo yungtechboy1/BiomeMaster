@@ -17,10 +17,7 @@ public class SwampTree extends TreeGenerator {
         
         BlockVector3 position = new BlockVector3(vectorPosition.getFloorX(), vectorPosition.getFloorY(), vectorPosition.getFloorZ());
         
-        int i;
-        for (i = rand.nextBoundedInt(4) + 5) {
-            
-        }
+        int i = rand.nextBoundedInt(4) + 5
         
         boolean flag = true;
 
