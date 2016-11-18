@@ -1,4 +1,4 @@
-package net.minecraft.world.gen;
+package BiomeMaster.generator.noise;
 
 import java.util.Random;
 import cn.nukkit.math.MathHelper;
