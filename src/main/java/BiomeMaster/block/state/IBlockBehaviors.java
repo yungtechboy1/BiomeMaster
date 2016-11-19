@@ -1,4 +1,4 @@
-package BiomeMaster.block;
+package BiomeMaster.block.state;
 
 import cn.nukkit.block.Block;
 import cn.nukkit.math.BlockVector3;
