@@ -1,4 +1,4 @@
-package BiomeMaster.block;
+package BiomeMaster.block.state;
 
 import com.google.common.collect.ImmutableMap;
 import java.util.Collection;
