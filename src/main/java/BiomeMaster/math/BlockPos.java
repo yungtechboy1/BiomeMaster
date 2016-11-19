@@ -6,7 +6,7 @@ import java.util.Iterator;
 import java.util.List;
 import javax.annotation.concurrent.Immutable;
 import cn.nukkit.entity.Entity;
-import net.minecraft.util.EnumFacing;
+import BiomeMaster.util.EnumFacing;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
