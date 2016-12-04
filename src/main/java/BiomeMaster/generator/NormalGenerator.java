@@ -8,7 +8,6 @@ import cn.nukkit.level.generator.biome.Biome;
 import cn.nukkit.level.generator.noise.Simplex;
 import cn.nukkit.level.generator.object.ore.OreType;
 import cn.nukkit.level.generator.populator.*;
-import cn.nukkit.math.NukkitRandom;
 import cn.nukkit.math.Vector3;
 
 import java.util.*;
@@ -124,7 +123,7 @@ public class NormalGenerator extends Generator {
     }
 
     @Override
-    public void init(ChunkManager level, NukkitRandom random) {
+    public void init(ChunkManager level, Random random) {
         this.level = level;
         this.nukkitRandom = random;
         this.random = new Random();
