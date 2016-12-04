@@ -2,10 +2,10 @@ package BiomeMaster.generator;
 
 import cn.nukkit.level.generator.biome.Biome;
 import cn.nukkit.level.generator.noise.Simplex;
+import cn.nukkit.math.NukkitRandom;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Random;
 
 /**
  * Created by CreeperFace on 26. 10. 2016.
@@ -19,7 +19,7 @@ public class BiomeSelector {
 
     private int[] map = new int[64 * 64];
 
-    public BiomeSelector(Random random, Biome fallback) {
+    public BiomeSelector(NukkitRandom random, Biome fallback) {
         this.fallback = fallback;
         this.temperature = new Simplex(random, 2F, 1F / 8F, 1F / 1024F);
         this.rainfall = new Simplex(random, 2F, 1F / 8F, 1F / 1024F);
